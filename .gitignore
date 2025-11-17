@@ -18,11 +18,6 @@ swarm/.env
 
 # ignore output files
 output/
-# *3b*.json
-# *7b*.json
-# *8b*.json
-# *14b*.json
-# *32b*.json
 
 # backup files
 data_backup/
