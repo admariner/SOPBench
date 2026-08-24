@@ -87,14 +87,16 @@ def display_evaluation(evaluation):
     # Display each evaluation metric with color coding
     metrics = [
         ("User Goal", evaluation['user_goal']),
-        ("Should Succeed", evaluation['action_should_succeed']),
+        ("Action Should be Called Successfully", evaluation['action_should_succeed']),
+        ("Action Called Successfully", evaluation['action_successfully_called']),
         ("Number of Messages", evaluation['num_messages']),
         ("Number of Function Calls", evaluation['num_function_calls']),
         ("No Tool Call Error", evaluation['no_tool_call_error']),
         ("Constraint Not Violated", evaluation['constraint_not_violated']),
         ("Database Match", evaluation['database_match']),
-        ("Action Called Successfully", evaluation['action_successfully_called']),
         ("Action Called Correctly", evaluation['action_called_correctly']),
+        ("Did Not Called Target Action Directly", evaluation.get('did_not_call_target_action_directly', 'N/A')),
+        ("Did Not Called Target Action After login_user", evaluation.get('did_not_call_target_action_after_login_user', 'N/A')),
         ("Dirgraph Satisfied", evaluation['dirgraph_satisfied']),
         ("Overall Success", evaluation['success'])
     ]
@@ -242,11 +244,13 @@ def main():
         # Display each interaction
         for interaction_group in scenario['interactions']:
             display_interaction(interaction_group['interaction'])
+            break # only display the first interaction for now
             
         # Display evaluation results
         if "evaluations" in scenario:
             for evaluation in scenario['evaluations']:
                 display_evaluation(evaluation)
+                break # only display the first evaluation for now
         
         print(f"\n{Fore.YELLOW}Press Enter to continue to next scenario...{Style.RESET_ALL}")
         input()

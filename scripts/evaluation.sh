@@ -5,13 +5,14 @@ models=(
         # "gpt-5-mini"
         # "gpt-4.1" 
         # "gpt-4o"
-        # "gpt-4o-mini" 
-        # "claude-3-7-sonnet-20250219" 
+        # "gpt-4o-mini"
+        # "gpt-4.1-mini" 
+        # "claude-3-7-sonnet-20250219"
         # "claude-3-5-sonnet-20241022" 
         # "gemini-2.0-flash-001" 
-        # "gemini-2.5-flash"
+        "gemini-2.5-flash"
         # "gemini-2.0-flash-thinking-exp" 
-        "o4-mini-high"
+        # "o4-mini-high"
         # "deepseek-r1"
         # "llama3.1-70b-instruct" 
         # "qwen2.5-72b-instruct" 
@@ -49,7 +50,8 @@ for model in "${models[@]}"; do
                     --domain $domain \
                     --assistant_model $model \
                     --tool_list $tool_list \
-                    --tool_call_mode $tool_call_mode
+                    --tool_call_mode $tool_call_mode \
+                    --output_dir ./output
             done
         done
     done

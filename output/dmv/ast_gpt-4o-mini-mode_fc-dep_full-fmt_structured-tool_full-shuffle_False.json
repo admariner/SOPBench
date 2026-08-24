@@ -475,7 +475,7 @@
         "evaluations": [
             {
                 "user_goal": "cancel_test",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 4,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -485,6 +485,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -505,13 +507,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -959,7 +968,7 @@
         "evaluations": [
             {
                 "user_goal": "cancel_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 2,
@@ -969,6 +978,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -989,13 +1000,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -1465,7 +1483,7 @@
         "evaluations": [
             {
                 "user_goal": "cancel_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 5,
                 "num_function_calls": 2,
                 "num_constraints": 2,
@@ -1475,6 +1493,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -1495,13 +1515,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 2.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -2081,7 +2108,7 @@
         "evaluations": [
             {
                 "user_goal": "cancel_test",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -2091,6 +2118,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -2111,13 +2140,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 7.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -2675,7 +2711,7 @@
         "evaluations": [
             {
                 "user_goal": "cancel_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 3,
@@ -2685,6 +2721,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -2705,13 +2743,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 7.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -3123,7 +3168,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 5,
                 "num_function_calls": 2,
                 "num_constraints": 1,
@@ -3133,6 +3178,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -3153,13 +3200,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 2.0,
             "avg_num_constraints": 1.0,
             "avg_num_constraints_expanded": 1.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -3539,7 +3593,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 1,
@@ -3549,6 +3603,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -3569,13 +3625,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 1.0,
             "avg_num_constraints_expanded": 1.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -3955,7 +4018,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 1,
@@ -3965,6 +4028,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -3985,13 +4050,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 1.0,
             "avg_num_constraints_expanded": 1.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -4453,7 +4525,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 4,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -4463,6 +4535,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -4483,13 +4557,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -4920,7 +5001,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 2,
@@ -4930,6 +5011,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -4950,13 +5033,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -5439,7 +5529,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 4,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -5449,6 +5539,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -5469,13 +5561,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -5926,7 +6025,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 3,
                 "num_function_calls": 2,
                 "num_constraints": 2,
@@ -5936,6 +6035,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -5956,13 +6057,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 3.0,
             "avg_num_function_calls": 2.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -6493,7 +6601,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 5,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -6503,6 +6611,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -6523,13 +6633,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -7007,7 +7124,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 3,
@@ -7017,6 +7134,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -7037,13 +7156,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -7555,7 +7681,7 @@
         "evaluations": [
             {
                 "user_goal": "change_dl_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 3,
@@ -7565,6 +7691,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -7585,13 +7713,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -8014,7 +8149,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 5,
                 "num_function_calls": 2,
                 "num_constraints": 1,
@@ -8024,6 +8159,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -8044,13 +8181,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 2.0,
             "avg_num_constraints": 1.0,
             "avg_num_constraints_expanded": 1.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -8435,7 +8579,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 1,
@@ -8445,6 +8589,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -8465,13 +8611,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 1.0,
             "avg_num_constraints_expanded": 1.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -8859,7 +9012,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 2,
                 "num_function_calls": 1,
                 "num_constraints": 1,
@@ -8869,6 +9022,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -8889,13 +9044,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 2.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 1.0,
             "avg_num_constraints_expanded": 1.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -9403,7 +9565,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 2,
@@ -9413,6 +9575,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -9433,13 +9597,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -9881,7 +10052,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 2,
@@ -9891,6 +10062,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -9911,13 +10084,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -10428,7 +10608,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -10438,6 +10618,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -10458,13 +10640,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -10937,7 +11126,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 5,
                 "num_function_calls": 2,
                 "num_constraints": 2,
@@ -10947,6 +11136,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -10967,13 +11158,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 2.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -11532,7 +11730,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -11542,6 +11740,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -11562,13 +11762,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -12061,7 +12268,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 3,
@@ -12071,6 +12278,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -12091,13 +12300,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -12618,7 +12834,7 @@
         "evaluations": [
             {
                 "user_goal": "change_vehicle_address",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 3,
@@ -12628,6 +12844,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -12648,13 +12866,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -13118,7 +13343,7 @@
         "evaluations": [
             {
                 "user_goal": "register_vehicle",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 4,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -13128,6 +13353,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -13148,13 +13375,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -13644,7 +13878,7 @@
         "evaluations": [
             {
                 "user_goal": "register_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 2,
@@ -13654,6 +13888,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -13674,13 +13910,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -14105,7 +14348,7 @@
         "evaluations": [
             {
                 "user_goal": "register_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 2,
@@ -14115,6 +14358,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -14135,13 +14380,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -14626,7 +14878,7 @@
         "evaluations": [
             {
                 "user_goal": "register_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -14636,6 +14888,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -14656,13 +14910,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -15204,7 +15465,7 @@
         "evaluations": [
             {
                 "user_goal": "register_vehicle",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -15214,6 +15475,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -15234,13 +15497,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -15742,7 +16012,7 @@
         "evaluations": [
             {
                 "user_goal": "register_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 3,
@@ -15752,6 +16022,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -15772,13 +16044,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -16305,7 +16584,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_dl",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 2,
@@ -16315,6 +16594,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -16335,13 +16616,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -16846,7 +17134,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_dl",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -16856,6 +17144,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -16876,13 +17166,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -17457,7 +17754,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_dl",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 3,
@@ -17467,6 +17764,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -17487,13 +17786,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -17980,7 +18286,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_dl",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 3,
@@ -17990,6 +18296,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -18010,13 +18318,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -18569,7 +18884,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_dl",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -18579,6 +18894,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -18599,13 +18916,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -19096,7 +19420,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -19106,6 +19430,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -19126,13 +19452,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -19624,7 +19957,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -19634,6 +19967,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -19654,13 +19989,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -20202,7 +20544,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 2,
@@ -20212,6 +20554,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -20232,13 +20576,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -20764,7 +21115,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 2,
@@ -20774,6 +21125,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -20794,13 +21147,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -21339,7 +21699,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -21349,6 +21709,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -21369,13 +21731,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -21864,7 +22233,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 3,
@@ -21874,6 +22243,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -21894,13 +22265,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -22439,7 +22817,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -22449,6 +22827,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -22469,13 +22849,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -23065,7 +23452,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 3,
@@ -23075,6 +23462,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -23095,13 +23484,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -23603,7 +23999,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 3,
@@ -23613,6 +24009,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -23633,13 +24031,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -24229,7 +24634,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 3,
@@ -24239,6 +24644,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -24259,13 +24666,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -24849,7 +25263,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -24859,6 +25273,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -24879,13 +25295,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -25447,7 +25870,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 3,
@@ -25457,6 +25880,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -25477,13 +25902,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -26051,7 +26483,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -26061,6 +26493,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -26081,13 +26515,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -26719,7 +27160,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 4,
@@ -26729,6 +27170,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -26749,13 +27192,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 6.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -27299,7 +27749,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 4,
@@ -27309,6 +27759,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -27329,13 +27781,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 6.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -27929,7 +28388,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 4,
@@ -27939,6 +28398,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -27959,13 +28420,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 6.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -28597,7 +29065,7 @@
         "evaluations": [
             {
                 "user_goal": "renew_vehicle",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 4,
@@ -28607,6 +29075,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -28627,13 +29097,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 6.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -29125,7 +29602,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 2,
@@ -29135,6 +29612,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -29155,13 +29634,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -29586,7 +30072,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 2,
@@ -29596,6 +30082,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -29616,13 +30104,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -30048,7 +30543,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 2,
@@ -30058,6 +30553,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -30078,13 +30575,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -30556,7 +31060,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -30566,6 +31070,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -30586,13 +31092,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -31294,7 +31807,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 7,
@@ -31304,6 +31817,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -31324,13 +31839,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 7.0,
             "avg_num_constraints_expanded": 10.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -32054,7 +32576,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 9,
                 "num_function_calls": 6,
                 "num_constraints": 7,
@@ -32064,6 +32586,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -32084,13 +32608,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 9.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 7.0,
             "avg_num_constraints_expanded": 10.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -32814,7 +33345,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 9,
                 "num_function_calls": 6,
                 "num_constraints": 7,
@@ -32824,6 +33355,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -32844,13 +33377,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 9.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 7.0,
             "avg_num_constraints_expanded": 10.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -33592,7 +34132,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 7,
@@ -33602,6 +34142,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -33622,13 +34164,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 7.0,
             "avg_num_constraints_expanded": 10.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -34339,7 +34888,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 6,
                 "num_constraints": 7,
@@ -34349,6 +34898,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -34369,13 +34920,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 7.0,
             "avg_num_constraints_expanded": 10.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -35099,7 +35657,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 9,
                 "num_function_calls": 6,
                 "num_constraints": 7,
@@ -35109,6 +35667,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -35129,13 +35689,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 9.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 7.0,
             "avg_num_constraints_expanded": 10.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -35746,7 +36313,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 6,
                 "num_function_calls": 5,
                 "num_constraints": 3,
@@ -35756,6 +36323,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -35776,13 +36345,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -36334,7 +36910,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -36344,6 +36920,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -36364,13 +36942,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -37143,7 +37728,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 8,
                 "num_function_calls": 7,
                 "num_constraints": 8,
@@ -37153,6 +37738,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -37173,13 +37760,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 7.0,
             "avg_num_constraints": 8.0,
             "avg_num_constraints_expanded": 13.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -37943,7 +38537,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 9,
                 "num_function_calls": 6,
                 "num_constraints": 8,
@@ -37953,6 +38547,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -37973,13 +38569,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 8.0,
             "avg_num_constraints_expanded": 13.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -38730,7 +39333,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 6,
                 "num_constraints": 8,
@@ -38740,6 +39343,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -38760,13 +39365,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 8.0,
             "avg_num_constraints_expanded": 13.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -39557,7 +40169,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 6,
                 "num_constraints": 8,
@@ -39567,6 +40179,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -39587,13 +40201,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 8.0,
             "avg_num_constraints_expanded": 13.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -40384,7 +41005,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 6,
                 "num_constraints": 8,
@@ -40394,6 +41015,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -40414,13 +41037,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 8.0,
             "avg_num_constraints_expanded": 13.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -41184,7 +41814,7 @@
         "evaluations": [
             {
                 "user_goal": "schedule_test",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 9,
                 "num_function_calls": 6,
                 "num_constraints": 8,
@@ -41194,6 +41824,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -41214,13 +41846,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 9.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 8.0,
             "avg_num_constraints_expanded": 13.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -41783,7 +42422,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 5,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -41793,6 +42432,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -41813,13 +42454,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -42294,7 +42942,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 3,
@@ -42304,6 +42952,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -42324,13 +42974,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -42847,7 +43504,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -42857,6 +43514,8 @@
                 "database_match": false,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -42877,13 +43536,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -43496,7 +44162,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 3,
@@ -43506,6 +44172,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -43526,13 +44194,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -44124,7 +44799,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 6,
                 "num_function_calls": 5,
                 "num_constraints": 4,
@@ -44134,6 +44809,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -44154,13 +44831,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -44712,7 +45396,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 4,
@@ -44722,6 +45406,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -44742,13 +45428,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -45326,7 +46019,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 6,
                 "num_function_calls": 5,
                 "num_constraints": 4,
@@ -45336,6 +46029,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -45356,13 +46051,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -45920,7 +46622,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 4,
@@ -45930,6 +46632,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -45950,13 +46654,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -46601,7 +47312,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 9,
                 "num_function_calls": 6,
                 "num_constraints": 5,
@@ -46611,6 +47322,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -46631,13 +47344,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 5.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -47280,7 +48000,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 9,
                 "num_function_calls": 6,
                 "num_constraints": 5,
@@ -47290,6 +48010,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -47310,13 +48032,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 9.0,
             "avg_num_function_calls": 6.0,
             "avg_num_constraints": 5.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -47929,7 +48658,7 @@
         "evaluations": [
             {
                 "user_goal": "transfer_title",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 8,
                 "num_function_calls": 5,
                 "num_constraints": 5,
@@ -47939,6 +48668,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -47959,13 +48690,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 5.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -48440,7 +49178,7 @@
         "evaluations": [
             {
                 "user_goal": "update_dl_legal_name",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -48450,6 +49188,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -48470,13 +49210,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -48907,7 +49654,7 @@
         "evaluations": [
             {
                 "user_goal": "update_dl_legal_name",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 2,
@@ -48917,6 +49664,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -48937,13 +49686,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 2.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -49541,7 +50297,7 @@
         "evaluations": [
             {
                 "user_goal": "update_test_status",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 6,
                 "num_function_calls": 5,
                 "num_constraints": 3,
@@ -49551,6 +50307,8 @@
                 "database_match": false,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -49571,13 +50329,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 5.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 7.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -50153,7 +50918,7 @@
         "evaluations": [
             {
                 "user_goal": "update_test_status",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 5,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -50163,6 +50928,8 @@
                 "database_match": false,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -50183,13 +50950,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 7.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -50696,7 +51470,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 2,
@@ -50706,6 +51480,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -50726,13 +51502,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -51179,7 +51962,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 2,
@@ -51189,6 +51972,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -51209,13 +51994,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -51684,7 +52476,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 5,
                 "num_function_calls": 2,
                 "num_constraints": 2,
@@ -51694,6 +52486,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -51714,13 +52508,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 2.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -52205,7 +53006,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 5,
                 "num_function_calls": 2,
                 "num_constraints": 2,
@@ -52215,6 +53016,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -52235,13 +53038,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
             "avg_num_function_calls": 2.0,
             "avg_num_constraints": 2.0,
             "avg_num_constraints_expanded": 3.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -52811,7 +53621,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -52821,6 +53631,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -52841,13 +53653,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -53351,7 +54170,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 3,
@@ -53361,6 +54180,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -53381,13 +54202,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -53974,7 +54802,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 3,
@@ -53984,6 +54812,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -54004,13 +54834,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -54565,7 +55402,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 6,
                 "num_function_calls": 3,
                 "num_constraints": 3,
@@ -54575,6 +55412,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -54595,13 +55434,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
             "avg_num_function_calls": 3.0,
             "avg_num_constraints": 3.0,
             "avg_num_constraints_expanded": 4.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -55188,7 +56034,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 1,
+                "action_should_succeed": true,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 4,
@@ -55198,6 +56044,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -55218,13 +56066,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -55745,7 +56600,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 4,
                 "num_function_calls": 1,
                 "num_constraints": 4,
@@ -55755,6 +56610,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -55775,13 +56632,20 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
             "avg_num_function_calls": 1.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 1
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
         }
     },
     {
@@ -56384,7 +57248,7 @@
         "evaluations": [
             {
                 "user_goal": "validate_vehicle_insurance",
-                "action_should_succeed": 0,
+                "action_should_succeed": false,
                 "num_messages": 7,
                 "num_function_calls": 4,
                 "num_constraints": 4,
@@ -56394,6 +57258,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -56414,13 +57280,20 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
             "avg_num_function_calls": 4.0,
             "avg_num_constraints": 4.0,
             "avg_num_constraints_expanded": 5.0,
-            "total_pass@1": 0
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
         }
     }
 ]

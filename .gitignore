@@ -1,9 +1,15 @@
 # directories
 __pycache__/
 __deprecated__/
+archive/
 plotting/
 processing/
 output/all
+
+# private paper sources and internal docs (do not upload)
+latex/
+latex_submission/
+docs/
 
 # files
 test*.py
@@ -30,3 +36,9 @@ verl/
 data_v2/
 output_v2/
 filter_data.py
+
+# editor / notebook artifacts
+.vscode/
+.idea/
+*.swp
+.ipynb_checkpoints/

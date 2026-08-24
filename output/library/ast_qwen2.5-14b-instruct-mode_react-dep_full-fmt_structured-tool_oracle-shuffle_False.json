@@ -463,7 +463,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "add_book",
+                "action_should_succeed": true,
+                "num_messages": 4,
+                "num_function_calls": 3,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": false,
+                "constraint_not_violated": true,
+                "database_match": false,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "add_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 4,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 0,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 0,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 4.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -798,16 +848,7 @@
                         "content": "The book addition was not successful. However, since the count is set to 0, it might be a system limitation or a specific rule that does not allow adding 0 copies of a book. I will inform the user about this.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_SXD6CUiBxsK2TkDsriyQdsZw",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -955,7 +996,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "add_book",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 3,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": false,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "add_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 0,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 0,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -1240,16 +1331,7 @@
                         "content": "The user's login attempt was unsuccessful. I cannot proceed with adding the book as the user is not logged in with the correct credentials.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_q2RzlVVKohF5e9XbFes8xUIU",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -1271,16 +1353,7 @@
                         "content": "The user provided all the necessary information again, but the login attempt was still unsuccessful. I need to inform the user that the login failed and cannot proceed with adding the book.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_3A7TIpay0GLJfxHm3Q4V8Hec",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -1428,7 +1501,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "add_book",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 1,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "add_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 1,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 1.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -1846,7 +1969,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "add_book",
+                "action_should_succeed": false,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "add_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -2285,7 +2458,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 4,
+                "num_function_calls": 3,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 4,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 4.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -2581,16 +2804,7 @@
                         "content": "The user's login attempt was unsuccessful. I cannot proceed with borrowing the book without a successful login.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_eRgI2U0e94DQ6bXiu5jXDQN7",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -2612,16 +2826,7 @@
                         "content": "The user provided their username and the book title again. Since the login attempt was unsuccessful, I need to inform the user that they need to log in successfully before borrowing a book.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_XEKiYCslP2hWzYyUPoA32tvp",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -2760,7 +2965,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -3032,16 +3287,7 @@
                         "content": "The login attempt was unsuccessful, which means the user's credentials are incorrect or there was an issue with the login process. I cannot proceed with borrowing the book without a successful login.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_JK1c9xW8wLLwvlXrbmb6OrOc",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -3088,16 +3334,7 @@
                         "content": "The login attempt has failed again, indicating that the provided username and password are incorrect or there is an issue with the account. I cannot proceed with borrowing the book without a successful login.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_OX6dHjbyYi8wDdMgG5BYdria",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -3236,7 +3473,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -3534,16 +3821,7 @@
                         "content": "The book \"The Great Gatsby\" is not available for borrowing. I cannot proceed with the borrow action.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_ojDma6fhOQFvWxPGpj6E5L3U",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -3683,7 +3961,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 5,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 5,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -3980,16 +4308,7 @@
                         "content": "The book \"Beloved\" is not available for borrowing. I need to inform the user.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_LMzugobhy4vJQdvHk7GAtnZE",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -4128,7 +4447,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 5,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 5,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -4693,7 +5062,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 3,
+                "num_constraints_expanded": 6,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 6,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 6.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -5256,7 +5675,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 3,
+                "num_constraints_expanded": 6,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 6,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 6.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -5863,7 +6332,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 4,
+                "num_constraints_expanded": 7,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 7,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 7.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -6446,7 +6965,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 4,
+                "num_constraints_expanded": 7,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 7,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 7.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -7053,7 +7622,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 4,
+                "num_constraints_expanded": 7,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 7,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 7.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -7562,7 +8181,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 3,
+                "num_constraints_expanded": 5,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 5,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 5.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -7930,16 +8599,7 @@
                         "content": "The user already has 3 books borrowed, so they cannot borrow another book at this time.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_aZhEOcnFtlLbtt324Jkeot80",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -8079,7 +8739,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 3,
+                "num_constraints": 3,
+                "num_constraints_expanded": 5,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 5,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 5.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -8812,7 +9522,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 8,
+                "num_function_calls": 7,
+                "num_constraints": 5,
+                "num_constraints_expanded": 10,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 8,
+            "total_num_function_calls": 7,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 10,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 8.0,
+            "avg_num_function_calls": 7.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 10.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -9520,7 +10280,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 5,
+                "num_constraints_expanded": 10,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 10,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 10.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -10251,7 +11061,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 8,
+                "num_function_calls": 7,
+                "num_constraints": 5,
+                "num_constraints_expanded": 10,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 8,
+            "total_num_function_calls": 7,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 10,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 8.0,
+            "avg_num_function_calls": 7.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 10.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -10986,7 +11846,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 8,
+                "num_function_calls": 7,
+                "num_constraints": 5,
+                "num_constraints_expanded": 10,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 8,
+            "total_num_function_calls": 7,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 10,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 8.0,
+            "avg_num_function_calls": 7.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 10.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -11692,7 +12602,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 5,
+                "num_constraints_expanded": 10,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 10,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 10.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -12302,7 +13262,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 0,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -12939,7 +13949,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -13574,7 +14634,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -14251,7 +15361,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 5,
+                "num_constraints_expanded": 9,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 9,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 9.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -14905,7 +16065,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 5,
+                "num_constraints_expanded": 9,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 9,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 9.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -15582,7 +16792,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 5,
+                "num_constraints_expanded": 9,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 9,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 9.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -16120,16 +17380,7 @@
                         "content": "The user has already borrowed 2 books, which means they cannot borrow another one. I will inform the user that they cannot borrow the book \"Beloved\" because they have reached the maximum number of books they can borrow.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_LLbhHJA9E7FwOUxZAmshWgDk",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -16271,7 +17522,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 8,
+                "num_function_calls": 5,
+                "num_constraints": 5,
+                "num_constraints_expanded": 9,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 8,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 9,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 8.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 9.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -16906,7 +18207,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 5,
+                "num_constraints_expanded": 9,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 5,
+            "total_num_constraints_expanded": 9,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 5.0,
+            "avg_num_constraints_expanded": 9.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -17684,7 +19035,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 8,
+                "num_function_calls": 7,
+                "num_constraints": 6,
+                "num_constraints_expanded": 12,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 8,
+            "total_num_function_calls": 7,
+            "total_num_constraints": 6,
+            "total_num_constraints_expanded": 12,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 0,
+            "avg_num_messages": 8.0,
+            "avg_num_function_calls": 7.0,
+            "avg_num_constraints": 6.0,
+            "avg_num_constraints_expanded": 12.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -18462,7 +19863,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": true,
+                "num_messages": 8,
+                "num_function_calls": 7,
+                "num_constraints": 6,
+                "num_constraints_expanded": 12,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 8,
+            "total_num_function_calls": 7,
+            "total_num_constraints": 6,
+            "total_num_constraints_expanded": 12,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 8.0,
+            "avg_num_function_calls": 7.0,
+            "avg_num_constraints": 6.0,
+            "avg_num_constraints_expanded": 12.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -19238,7 +20689,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 8,
+                "num_function_calls": 7,
+                "num_constraints": 6,
+                "num_constraints_expanded": 12,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 8,
+            "total_num_function_calls": 7,
+            "total_num_constraints": 6,
+            "total_num_constraints_expanded": 12,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 8.0,
+            "avg_num_function_calls": 7.0,
+            "avg_num_constraints": 6.0,
+            "avg_num_constraints_expanded": 12.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -19993,7 +21494,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 6,
+                "num_constraints_expanded": 12,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 6,
+            "total_num_constraints_expanded": 12,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 6.0,
+            "avg_num_constraints_expanded": 12.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -20652,16 +22203,7 @@
                         "content": "The user \"pepperoni\" does not have a membership status, which means they cannot borrow the restricted book \"Beloved\". Therefore, the borrowing process cannot be successful.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_RMjYm7tsDNd36xZ83SXDQiwU",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -20800,7 +22342,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 10,
+                "num_function_calls": 7,
+                "num_constraints": 6,
+                "num_constraints_expanded": 12,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 10,
+            "total_num_function_calls": 7,
+            "total_num_constraints": 6,
+            "total_num_constraints_expanded": 12,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 10.0,
+            "avg_num_function_calls": 7.0,
+            "avg_num_constraints": 6.0,
+            "avg_num_constraints_expanded": 12.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -21603,7 +23195,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 9,
+                "num_function_calls": 8,
+                "num_constraints": 6,
+                "num_constraints_expanded": 12,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 9,
+            "total_num_function_calls": 8,
+            "total_num_constraints": 6,
+            "total_num_constraints_expanded": 12,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 9.0,
+            "avg_num_function_calls": 8.0,
+            "avg_num_constraints": 6.0,
+            "avg_num_constraints_expanded": 12.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -22356,7 +23998,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "borrow_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 6,
+                "num_constraints_expanded": 12,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "borrow_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 6,
+            "total_num_constraints_expanded": 12,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 6.0,
+            "avg_num_constraints_expanded": 12.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -22849,7 +24541,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "check_return_date",
+                "action_should_succeed": true,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "check_return_date": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -23150,16 +24892,7 @@
                         "content": "The login attempt was unsuccessful, which means the provided credentials are incorrect or the user is not authenticated. I cannot proceed with checking the return date without a successful login.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_dgaXHI6Fl3WfTz7QZXw59y3X",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -23298,7 +25031,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "check_return_date",
+                "action_should_succeed": false,
+                "num_messages": 4,
+                "num_function_calls": 1,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "check_return_date": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 4,
+            "total_num_function_calls": 1,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 4.0,
+            "avg_num_function_calls": 1.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -23598,16 +25381,7 @@
                         "content": "The user's login attempt was unsuccessful. I need to confirm the login credentials before proceeding.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_Z4RrhXMbqQR37LcrnsuQZ5bf",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -23795,7 +25569,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "check_return_date",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 3,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "check_return_date": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -24298,7 +26122,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "check_return_date",
+                "action_should_succeed": false,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "check_return_date": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 0,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -24779,7 +26653,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "pay_late_fee",
+                "action_should_succeed": true,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "pay_late_fee": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -25118,16 +27042,7 @@
                         "content": "The late fee has been calculated. The user's account balance is $5, but the late fee is $6. The user does not have enough funds to cover the late fee.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_yUyyUdqmak5tHhCbC0YtEQQx",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -25266,7 +27181,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "pay_late_fee",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 3,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "pay_late_fee": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -25804,7 +27769,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "remove_book",
+                "action_should_succeed": true,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 3,
+                "num_constraints_expanded": 5,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "remove_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 5,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 5.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -26348,7 +28363,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "remove_book",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 3,
+                "num_constraints_expanded": 5,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "remove_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 5,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 5.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -26785,7 +28850,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": true,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -27220,7 +29335,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": false,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -27655,7 +29820,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": false,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -28201,7 +30416,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": true,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 3,
+                "num_constraints_expanded": 5,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 5,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 5.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -28721,7 +30986,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": true,
+                "num_messages": 4,
+                "num_function_calls": 3,
+                "num_constraints": 3,
+                "num_constraints_expanded": 5,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 4,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 5,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 4.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 5.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -29132,16 +31447,7 @@
                         "content": "The user has already reserved 2 slots. To proceed with the reservation, the user must not exceed the limit of 1 additional reserved slot. Since the user has already reached the limit, they cannot reserve more slots.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_Op7Sd2i9VkXe9mHJatx2jpd3",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -29287,7 +31593,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 3,
+                "num_constraints": 3,
+                "num_constraints_expanded": 5,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 3,
+            "total_num_constraints_expanded": 5,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 3.0,
+            "avg_num_constraints_expanded": 5.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -29917,7 +32273,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": true,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -30472,7 +32878,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": true,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -31027,7 +33483,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": false,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -31592,7 +34098,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": false,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -32147,7 +34703,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": false,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -32702,7 +35308,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": false,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -33339,7 +35995,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "reserve_room",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 5,
+                "num_constraints": 4,
+                "num_constraints_expanded": 8,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": false,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "reserve_room": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 5,
+            "total_num_constraints": 4,
+            "total_num_constraints_expanded": 8,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 0,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 5.0,
+            "avg_num_constraints": 4.0,
+            "avg_num_constraints_expanded": 8.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -33830,7 +36536,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "return_book",
+                "action_should_succeed": true,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": true,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "return_book": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 1,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -34131,16 +36887,7 @@
                         "content": "The login attempt was unsuccessful, so I need to inform the user and cannot proceed with returning the book.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_DMyNBd5ib4sVnOWoQuXfHPgY",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -34279,7 +37026,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "return_book",
+                "action_should_succeed": false,
+                "num_messages": 4,
+                "num_function_calls": 1,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "return_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 4,
+            "total_num_function_calls": 1,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 4.0,
+            "avg_num_function_calls": 1.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -34720,7 +37517,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "return_book",
+                "action_should_succeed": false,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "return_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -35261,7 +38108,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "return_book",
+                "action_should_succeed": false,
+                "num_messages": 7,
+                "num_function_calls": 6,
+                "num_constraints": 2,
+                "num_constraints_expanded": 4,
+                "no_tool_call_error": true,
+                "constraint_not_violated": false,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "return_book": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 7,
+            "total_num_function_calls": 6,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 4,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 0,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 0,
+            "avg_num_messages": 7.0,
+            "avg_num_function_calls": 6.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 4.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -35609,7 +38506,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "show_available_rooms",
+                "action_should_succeed": true,
+                "num_messages": 3,
+                "num_function_calls": 2,
+                "num_constraints": 1,
+                "num_constraints_expanded": 1,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": false,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "show_available_rooms": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 3,
+            "total_num_function_calls": 2,
+            "total_num_constraints": 1,
+            "total_num_constraints_expanded": 1,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 0,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 3.0,
+            "avg_num_function_calls": 2.0,
+            "avg_num_constraints": 1.0,
+            "avg_num_constraints_expanded": 1.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -35814,16 +38761,7 @@
                         "content": "The login attempt was unsuccessful. I need to inform the user that their login credentials are incorrect or that they need to provide the correct password.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_qpdZ9zctppHIWPT2tWZUcWby",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -35962,7 +38900,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "show_available_rooms",
+                "action_should_succeed": false,
+                "num_messages": 4,
+                "num_function_calls": 1,
+                "num_constraints": 1,
+                "num_constraints_expanded": 1,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "show_available_rooms": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 4,
+            "total_num_function_calls": 1,
+            "total_num_constraints": 1,
+            "total_num_constraints_expanded": 1,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 4.0,
+            "avg_num_function_calls": 1.0,
+            "avg_num_constraints": 1.0,
+            "avg_num_constraints_expanded": 1.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -36168,16 +39156,7 @@
                         "content": "The login attempt was unsuccessful. I should inform the user that their login credentials are incorrect or there might be an issue with their account.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_eSgZyupIwxRlzUHHkjiJR1yW",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -36316,7 +39295,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "show_available_rooms",
+                "action_should_succeed": false,
+                "num_messages": 4,
+                "num_function_calls": 1,
+                "num_constraints": 1,
+                "num_constraints_expanded": 1,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "show_available_rooms": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 4,
+            "total_num_function_calls": 1,
+            "total_num_constraints": 1,
+            "total_num_constraints_expanded": 1,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 4.0,
+            "avg_num_function_calls": 1.0,
+            "avg_num_constraints": 1.0,
+            "avg_num_constraints_expanded": 1.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -36795,7 +39824,57 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "update_membership",
+                "action_should_succeed": true,
+                "num_messages": 5,
+                "num_function_calls": 4,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": false,
+                "success": false
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "update_membership": 1
+            },
+            "total_action_should_succeed": 1,
+            "total_num_messages": 5,
+            "total_num_function_calls": 4,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 0,
+            "total_success": 0,
+            "avg_num_messages": 5.0,
+            "avg_num_function_calls": 4.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 0,
+            "per_run_pass_rates": {
+                "run_1_pass": 0
+            },
+            "mean_pass_rate": 0.0,
+            "std_pass_rate": 0.0
+        }
     },
     {
         "domain": "library",
@@ -37132,16 +40211,7 @@
                         "content": "The monthly fee for restricted access is $5.00. Since the user's account balance is $3.00, they do not have enough funds to cover the fee. Therefore, I cannot proceed with updating their restricted access status.",
                         "thinking": null,
                         "thinking_signature": null,
-                        "tool_calls": [
-                            {
-                                "id": "call_i9pLWosgScNOWnTm9nOCcqpP",
-                                "function": {
-                                    "arguments": "N/A",
-                                    "name": "N/A"
-                                },
-                                "type": "function"
-                            }
-                        ],
+                        "tool_calls": [],
                         "function_call": null,
                         "refusal": null,
                         "audio": null,
@@ -37280,6 +40350,56 @@
                     }
                 }
             }
-        ]
+        ],
+        "evaluations": [
+            {
+                "user_goal": "update_membership",
+                "action_should_succeed": false,
+                "num_messages": 6,
+                "num_function_calls": 3,
+                "num_constraints": 2,
+                "num_constraints_expanded": 3,
+                "no_tool_call_error": true,
+                "constraint_not_violated": true,
+                "database_match": true,
+                "action_successfully_called": false,
+                "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
+                "action_called_correctly": true,
+                "success": true
+            }
+        ],
+        "statistics": {
+            "total_tasks": 1,
+            "total_interactions": 1,
+            "distr_user_goal": {
+                "update_membership": 1
+            },
+            "total_action_should_succeed": 0,
+            "total_num_messages": 6,
+            "total_num_function_calls": 3,
+            "total_num_constraints": 2,
+            "total_num_constraints_expanded": 3,
+            "total_no_tool_call_error": 1,
+            "total_constraint_not_violated": 1,
+            "total_database_match": 1,
+            "total_action_successfully_called": 0,
+            "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
+            "total_action_called_correctly": 1,
+            "total_success": 1,
+            "avg_num_messages": 6.0,
+            "avg_num_function_calls": 3.0,
+            "avg_num_constraints": 2.0,
+            "avg_num_constraints_expanded": 3.0,
+            "total_pass@1": 1,
+            "per_run_pass_rates": {
+                "run_1_pass": 1
+            },
+            "mean_pass_rate": 1.0,
+            "std_pass_rate": 0.0
+        }
     }
 ]

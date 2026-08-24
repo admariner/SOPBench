@@ -476,6 +476,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": false,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -496,6 +498,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 0,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 5.0,
@@ -952,6 +956,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -972,6 +978,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 2.0,
@@ -1463,6 +1471,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -1483,6 +1493,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
@@ -2084,6 +2096,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -2104,6 +2118,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -2696,6 +2712,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -2716,6 +2734,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -3171,6 +3191,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -3191,6 +3213,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -3640,6 +3664,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": false,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -3660,6 +3686,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 0,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 9.0,
@@ -4083,6 +4111,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -4103,6 +4133,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
@@ -4599,6 +4631,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -4619,6 +4653,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -5058,6 +5094,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -5078,6 +5116,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 2.0,
@@ -5595,6 +5635,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -5615,6 +5657,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -6100,6 +6144,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -6120,6 +6166,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
@@ -6685,6 +6733,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -6705,6 +6755,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -7204,6 +7256,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -7224,6 +7278,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -7757,6 +7813,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -7777,6 +7835,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -8247,6 +8307,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -8267,6 +8329,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -8673,6 +8737,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -8693,6 +8759,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -9163,6 +9231,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -9183,6 +9253,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 9.0,
@@ -9703,6 +9775,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -9723,6 +9797,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -10199,6 +10275,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -10219,6 +10297,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -10777,6 +10857,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -10797,6 +10879,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 10.0,
@@ -11300,6 +11384,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -11320,6 +11406,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -11900,6 +11988,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -11920,6 +12010,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -12434,6 +12526,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -12454,6 +12548,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -13009,6 +13105,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -13029,6 +13127,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -13527,6 +13627,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -13547,6 +13649,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -14018,6 +14122,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -14038,6 +14144,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -14484,6 +14592,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -14504,6 +14614,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -14988,6 +15100,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -15008,6 +15122,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
@@ -15541,6 +15657,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -15561,6 +15679,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 6.0,
@@ -16062,6 +16182,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -16082,6 +16204,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
@@ -16630,6 +16754,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -16650,6 +16776,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -17198,6 +17326,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -17218,6 +17348,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
@@ -17814,6 +17946,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -17834,6 +17968,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -18342,6 +18478,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -18362,6 +18500,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -18958,6 +19098,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -18978,6 +19120,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 8.0,
@@ -19503,6 +19647,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -19523,6 +19669,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -20026,6 +20174,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -20046,6 +20196,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -20622,6 +20774,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -20642,6 +20796,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -21189,6 +21345,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -21209,6 +21367,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
@@ -21782,6 +21942,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -21802,6 +21964,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -22325,6 +22489,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -22345,6 +22511,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -22883,6 +23051,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -22903,6 +23073,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -23514,6 +23686,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -23534,6 +23708,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -24057,6 +24233,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -24077,6 +24255,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -24710,6 +24890,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -24730,6 +24912,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 9.0,
@@ -25348,6 +25532,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -25368,6 +25554,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -25942,6 +26130,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -25962,6 +26152,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -26476,6 +26668,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -26496,6 +26690,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
@@ -27149,6 +27345,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -27169,6 +27367,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -27734,6 +27934,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -27754,6 +27956,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -28360,6 +28564,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -28380,6 +28586,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -29046,6 +29254,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -29066,6 +29276,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 10.0,
@@ -29579,6 +29791,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -29599,6 +29813,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -30045,6 +30261,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -30065,6 +30283,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -30490,6 +30710,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -30510,6 +30732,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 3.0,
@@ -31003,6 +31227,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -31023,6 +31249,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -31790,6 +32018,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -31810,6 +32040,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 10.0,
@@ -32533,6 +32765,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -32553,6 +32787,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 8.0,
@@ -33232,6 +33468,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -33252,6 +33490,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 6.0,
@@ -33993,6 +34233,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -34013,6 +34255,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -34758,6 +35002,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -34778,6 +35024,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -35536,6 +35784,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -35556,6 +35806,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 11.0,
@@ -36192,6 +36444,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -36212,6 +36466,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 9.0,
@@ -36741,6 +36997,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -36761,6 +37019,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
@@ -37546,6 +37806,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -37566,6 +37828,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -38373,6 +38637,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -38393,6 +38659,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 10.0,
@@ -39091,6 +39359,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -39111,6 +39381,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 5.0,
@@ -39949,6 +40221,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": false,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -39969,6 +40243,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 0,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 11.0,
@@ -40772,6 +41048,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -40792,6 +41070,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -41577,6 +41857,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -41597,6 +41879,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 9.0,
@@ -42194,6 +42478,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -42214,6 +42500,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -42710,6 +42998,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -42730,6 +43020,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -43268,6 +43560,8 @@
                 "database_match": false,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -43288,6 +43582,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 7.0,
@@ -43922,6 +44218,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -43942,6 +44240,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 8.0,
@@ -44568,6 +44868,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -44588,6 +44890,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -45196,6 +45500,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -45216,6 +45522,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -45828,6 +46136,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -45848,6 +46158,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -46427,6 +46739,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -46447,6 +46761,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -47113,6 +47429,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -47133,6 +47451,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -47797,6 +48117,8 @@
                 "database_match": false,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -47817,6 +48139,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 9.0,
@@ -48464,6 +48788,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -48484,6 +48810,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 10.0,
@@ -48993,6 +49321,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -49013,6 +49343,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -49465,6 +49797,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -49485,6 +49819,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -50095,6 +50431,8 @@
                 "database_match": false,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": false,
                 "success": false
             }
@@ -50115,6 +50453,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 0,
             "total_success": 0,
             "avg_num_messages": 7.0,
@@ -50725,6 +51065,8 @@
                 "database_match": false,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": false
             }
@@ -50745,6 +51087,8 @@
             "total_database_match": 0,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 0,
             "avg_num_messages": 7.0,
@@ -51286,6 +51630,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -51306,6 +51652,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -51774,6 +52122,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -51794,6 +52144,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -52297,6 +52649,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -52317,6 +52671,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -52836,6 +53192,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -52856,6 +53214,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -53447,6 +53807,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -53467,6 +53829,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -53992,6 +54356,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -54012,6 +54378,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -54633,6 +55001,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -54653,6 +55023,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 9.0,
@@ -55251,6 +55623,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -55271,6 +55645,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 7.0,
@@ -55901,6 +56277,8 @@
                 "database_match": true,
                 "action_successfully_called": true,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -55921,6 +56299,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 1,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 8.0,
@@ -56463,6 +56843,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -56483,6 +56865,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 4.0,
@@ -57159,6 +57543,8 @@
                 "database_match": true,
                 "action_successfully_called": false,
                 "dirgraph_satisfied": true,
+                "did_not_call_target_action_directly": true,
+                "did_not_call_target_action_after_login_user": true,
                 "action_called_correctly": true,
                 "success": true
             }
@@ -57179,6 +57565,8 @@
             "total_database_match": 1,
             "total_action_successfully_called": 0,
             "total_dirgraph_satisfied": 1,
+            "total_did_not_call_target_action_directly": 1,
+            "total_did_not_call_target_action_after_login_user": 1,
             "total_action_called_correctly": 1,
             "total_success": 1,
             "avg_num_messages": 15.0,

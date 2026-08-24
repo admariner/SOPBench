@@ -118,9 +118,15 @@ dep_descr_format_instr = {
 
 # gathering the dependency instructions, dependencies guaranteed to be with the assistant
 def gather_dependency_instructions(domain_str:str, dep_full_descr:dict, user_goal:str, dep:dict,
-    dep_params:dict, included_functions:list[str] | None, shuffle_func:bool, constraint_descr_format:str, provide_database_getter:bool=False)->str:
+    dep_params:dict, included_functions:list[str] | None, shuffle_func:bool, constraint_descr_format:str, provide_database_getter:bool=False,
+    abl_hint:bool=False, abl_verdict:bool=False, abl_order:bool=False, abl_domain_system=None, abl_user_known:dict|None=None)->str:
     # fill in the user goal dependency
-    dep_verb = get_dep_verb(domain_str, dep, dep_params, constraint_descr_format)
+    if (abl_hint or abl_verdict) and constraint_descr_format == "structured":
+        from env.ablation import annotated_structured
+        dep_verb = annotated_structured(domain_str, dep, dep_params, abl_domain_system,
+                                        abl_user_known or {}, hint=abl_hint, verdict=abl_verdict)
+    else:
+        dep_verb = get_dep_verb(domain_str, dep, dep_params, constraint_descr_format)
     dep_full_descr[user_goal] = dep_verb
     # construct the full verbalization
     # service actions and internal functions
@@ -151,8 +157,9 @@ def gather_dependency_instructions(domain_str:str, dep_full_descr:dict, user_goa
     return dependency_instructions
 
 # initializes the task environment, need to consider if there is no task
-def task_initializer(domain_str:str, task:dict, dep_innate_full:dict, default_dep_full:dict, default_dep_full_descr:dict, 
-    included_functions:list[str] | None, mode:str, shuffle_func:bool, constraint_descr_format:str, dependency_verb_dep_orig:bool=True)->tuple:
+def task_initializer(domain_str:str, task:dict, dep_innate_full:dict, default_dep_full:dict, default_dep_full_descr:dict,
+    included_functions:list[str] | None, mode:str, shuffle_func:bool, constraint_descr_format:str, dependency_verb_dep_orig:bool=True,
+    abl_hint:bool=False, abl_verdict:bool=False, abl_order:bool=False)->tuple:
     # initializing the domain system
     dep_full = copy.deepcopy(default_dep_full)
     dep_full_descr = copy.deepcopy(default_dep_full_descr)
@@ -181,7 +188,13 @@ def task_initializer(domain_str:str, task:dict, dep_innate_full:dict, default_de
     # compiling the assistant dependency instructions
     dep_to_be_verbalized = dep if not dependency_verb_dep_orig else dep_orig
     assistant_dependency_instructions = gather_dependency_instructions(domain_str, dep_full_descr, user_goal, dep_to_be_verbalized,
-        dep_params, included_functions, shuffle_func, constraint_descr_format) if mode != "program" else None
+        dep_params, included_functions, shuffle_func, constraint_descr_format,
+        abl_hint=abl_hint, abl_verdict=abl_verdict, abl_domain_system=domain_system,
+        abl_user_known=(task["user_known"] if task else {})) if mode != "program" else None
+    # append the explicit action-order procedure (rendered from the directed action graph)
+    if abl_order and assistant_dependency_instructions is not None and task and task.get("directed_action_graph"):
+        from env.ablation import render_order
+        assistant_dependency_instructions += "\n\n" + render_order(task["directed_action_graph"])
     assistant_info = create_assistant(domain_str, shuffle_func, mode, included_functions, assistant_dependency_instructions)
     # task_information for internal state during the interaction
     task_information = {"domain_str": domain_str, "initial_database": copy.deepcopy(domain_system.evaluation_get_database())}

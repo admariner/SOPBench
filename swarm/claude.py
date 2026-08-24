@@ -271,6 +271,18 @@ def claude_chat_completion_openai_format(
         "top_p": top_p,
     }
 
+    # Newer Claude models (Opus 4.1+/Sonnet 4.5+/5.x) reject specifying both
+    # `temperature` and `top_p`. SOPBench drives determinism via `temperature`
+    # (0.0 for the main pass), so we keep `temperature` and drop `top_p`; at
+    # temperature 0 this is behaviorally identical to the older dual-param calls.
+    _single_sampling_prefixes = (
+        "claude-opus-4-1", "claude-opus-4-5", "claude-opus-4-6",
+        "claude-opus-4-7", "claude-opus-4-8", "claude-sonnet-4-5",
+        "claude-sonnet-5", "claude-fable-5", "claude-haiku-4-5",
+    )
+    if any(model.startswith(p) for p in _single_sampling_prefixes):
+        create_params.pop("top_p", None)
+
     if thinking_mode:
         del create_params["top_p"]
         create_params["temperature"] = 1.0 # thinking mode only supports temperature 1.0

@@ -70,7 +70,7 @@ class Swarm:
 
         messages = [{"role": "system", "content": agent.instructions}] + history
         debug_print(debug, "Getting chat completion for input:", messages)
-
+        
         create_params = {
             "messages": messages,
             "temperature": agent.temperature,
@@ -84,7 +84,7 @@ class Swarm:
         # use chat mode by default, only if using openai o-series models
         model_name = agent.client.model_name_huggingface
         mode = "chat"
-        for _ in ["o1", "o3", "o4"]:
+        for _ in ["o1", "o3", "o4", "gpt-5"]:
             if _ in model_name:
                 mode = "reasoning"
                 break

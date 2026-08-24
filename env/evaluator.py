@@ -237,6 +237,23 @@ def evaluator_function_directed_graph(domain_str:str, task:dict, log_msg_fcall:l
     successful_funccalls = {} # {"action1": [("param1", "param2"), {('a', 1), ('b', 2)}]}
     evaluation_result["action_successfully_called"] = False
     evaluation_result["dirgraph_satisfied"] = True
+    # Check if the first function call is the target action directly
+    evaluation_result["did_not_call_target_action_directly"] = True
+    if func_calls and len(func_calls) > 0:
+        first_func_call = func_calls[0]
+        first_func_name = first_func_call["tool_name"]
+        if first_func_name == task["user_goal"]:
+            evaluation_result["did_not_call_target_action_directly"] = False
+    
+    # Check if the target action is called as the second function call after login_user
+    evaluation_result["did_not_call_target_action_after_login_user"] = True
+    if func_calls and len(func_calls) >= 2:
+        first_func_call = func_calls[0]
+        second_func_call = func_calls[1]
+        first_func_name = first_func_call["tool_name"]
+        second_func_name = second_func_call["tool_name"]
+        if first_func_name == "login_user" and second_func_name == task["user_goal"]:
+            evaluation_result["did_not_call_target_action_after_login_user"] = False
     for i in range(len(func_calls)):
         # filter out error function calls and parse the function call
         if gt_responses[i][0] == 2: continue

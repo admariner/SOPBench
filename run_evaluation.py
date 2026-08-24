@@ -119,7 +119,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--num_run_per_interaction", type=int, default=1, help="Number of interactions per task")
     parser.add_argument("--verbose", action="store_true", help="Whether to print verbose output")
     # Data settings
-    parser.add_argument("--output_dir", type=str, default="./output_v2", help="Output directory")
+    parser.add_argument("--output_dir", type=str, default="./output", help="Output directory")
     parser.add_argument("--domain", type=str, default="bank", choices=["bank", "online_market", "dmv", "healthcare", "library", "hotel", "university", "all"], help="Domain name")
     parser.add_argument("--indent_amount", type=int, default=2, help="controls the indent amount when writing to a file")
     args = parser.parse_args()
@@ -175,7 +175,14 @@ def main():
                 "constraint_violations": 0,        # Changed from constraint_not_violated
                 "database_mismatches": 0,          # Changed from database_match
                 "dirgraph_violations": 0,          # Changed from dirgraph_satisfied
-                "incorrect_action_calls": 0        # Changed from action_called_correctly
+                "incorrect_action_calls": 0,       # Changed from action_called_correctly
+                "call_target_action_directly": 0,  # Direct target action call (regardless of success)
+                "call_target_action_after_login_user": 0,  # Target action after login_user (failed cases only)
+                "completely_overlook_constraints": 0, # Success=False, dirgraph_satisfied=False, not other categories
+                "overlook_partial_constraints": 0, # Success=False, dirgraph_satisfied=False, not other categories
+                "wrong_interpretation": 0,             # Success=False, dirgraph_satisfied=True
+                "fail_to_complete_permissible_task": 0, # Success=False, action_should_succeed=True, action_successfully_called=False
+                "complete_impermissible_task": 0,        # Success=False, action_should_succeed=False, action_successfully_called=True
             }
         }
         # Create a new list to store updated simulations
@@ -233,14 +240,54 @@ def main():
             # Update the error statistics
             for evaluation_result in evaluations:
                 error_statistics["total_evaluations"] += 1
-                if evaluation_result.get("success", False): continue # Only track errors for failed cases
+                
+                # Check if target action was called directly (regardless of success)
+                if not evaluation_result.get("did_not_call_target_action_directly", True):
+                    error_statistics["error_causes"]["call_target_action_directly"] += 1
+                    error_statistics["error_causes"]["completely_overlook_constraints"] += 1 
+                
+                # Only process failed cases for other error categories
+                if evaluation_result.get("success", False): 
+                    continue
+                    
                 error_statistics["total_failures"] += 1
+                
                 # Check all status indicators for each failed evaluation
                 error_statistics["error_causes"]["tool_call_errors"] += 1-int(evaluation_result["no_tool_call_error"])
                 error_statistics["error_causes"]["constraint_violations"] += 1-int(evaluation_result["constraint_not_violated"])
                 error_statistics["error_causes"]["database_mismatches"] += 1-int(evaluation_result["database_match"])
                 error_statistics["error_causes"]["dirgraph_violations"] += 1-int(evaluation_result["dirgraph_satisfied"])
                 error_statistics["error_causes"]["incorrect_action_calls"] += 1-int(evaluation_result["action_called_correctly"])
+                
+                # Specific error categorization for failed cases
+                success = evaluation_result.get("success", False)
+                dirgraph_satisfied = evaluation_result.get("dirgraph_satisfied", False)
+                called_directly = not evaluation_result.get("did_not_call_target_action_directly", True)
+                called_after_login = not evaluation_result.get("did_not_call_target_action_after_login_user", True)
+                action_should_succeed = evaluation_result.get("action_should_succeed", False)
+                action_successfully_called = evaluation_result.get("action_successfully_called", False)
+                
+                if not success:
+                    # Check for task completion mismatches first
+                    if action_should_succeed and not action_successfully_called:
+                        # Should have succeeded but didn't call the action
+                        error_statistics["error_causes"]["fail_to_complete_permissible_task"] += 1
+                    elif not action_should_succeed and action_successfully_called:
+                        # Shouldn't have succeeded but called the action anyway
+                        error_statistics["error_causes"]["complete_impermissible_task"] += 1
+                    elif not dirgraph_satisfied and called_after_login:
+                        # Failed case: dirgraph_satisfied=False, login_user -> target_action
+                        error_statistics["error_causes"]["call_target_action_after_login_user"] += 1
+                        error_statistics["error_causes"]["completely_overlook_constraints"] += 1 
+                    elif dirgraph_satisfied:
+                        # Failed case: dirgraph_satisfied=True
+                        error_statistics["error_causes"]["wrong_interpretation"] += 1
+                    elif not dirgraph_satisfied and not called_after_login and not called_directly:
+                        # Failed case: dirgraph_satisfied=False, not other categories
+                        error_statistics["error_causes"]["overlook_partial_constraints"] += 1
+                
+                
+            
             # Create a new task simulation dict with the evaluations
             updated_simulation = copy.deepcopy(task_simulation)
             updated_simulation["evaluations"] = evaluations
@@ -269,7 +316,10 @@ def main():
         goal_distribution[current_domain] = goal_statistics
         # Save the updated task simulations
         save_results(new_output_file, updated_task_simulations, verbose=True)
-        if args.domain == "all": combined_results[current_domain] = domain_stats
+        if args.domain == "all": 
+            combined_results[current_domain] = domain_stats
+            # if current_domain != "hotel":
+                # combined_results[current_domain] = domain_stats
         
     # Aggregate results if needed
     if args.domain != "all": 

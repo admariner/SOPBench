@@ -16,6 +16,7 @@ from swarm.llm_handler import OpenAIHandler, _cleanup_all_handlers
 from swarm.util import function_to_json, _generate_random_id
 from env.evaluator import count_constraint_units
 from env.task import task_default_dep_full, task_initializer
+from swarm.pva_scaffold import apply_scaffold
 
 # Store handlers for cleanup
 _handlers = []
@@ -54,6 +55,15 @@ def parse_args() -> argparse.Namespace:
                     help="Tool call mode for the assistant model", choices=["fc", "react", "act-only", "react-v"])
     parser.add_argument("--tool_list", type=str, default="full",
                     help="Tool list to use for the simulation, only use the tools that have been evaluated or full tool list", choices=["full", "oracle"])
+    parser.add_argument("--scaffold", type=str, default="none",
+                    help="Compliance harness scaffold appended to assistant instructions", choices=["none", "pva"])
+    # Ablation add-ons (information-only augmentations to the oracle setting)
+    parser.add_argument("--constraint_hint", action="store_true",
+                    help="Annotate each constraint with which verification tool(s) check it")
+    parser.add_argument("--constraint_verdict", action="store_true",
+                    help="Annotate each data constraint with its ground-truth [SATISFIED]/[NOT SATISFIED]")
+    parser.add_argument("--action_order", action="store_true",
+                    help="Append the explicit required verification procedure (from the directed action graph)")
     
     # User model parameters
     parser.add_argument("--user_model", type=str, default=None,
@@ -149,8 +159,9 @@ def run_task_simulation(
         raise ValueError(f"Invalid tool list: {args.tool_list}")
     # Initialize the task environment, get all the information needed for the simulation
     domain_system, user_info, assistant_info, task_info =\
-        task_initializer(args.domain, task, dep_innate_full, default_dep_full, default_dep_full_descr, 
-                         included_functions, args.env_mode, args.shuffle_func, args.constraint_descr_format)
+        task_initializer(args.domain, task, dep_innate_full, default_dep_full, default_dep_full_descr,
+                         included_functions, args.env_mode, args.shuffle_func, args.constraint_descr_format,
+                         abl_hint=args.constraint_hint, abl_verdict=args.constraint_verdict, abl_order=args.action_order)
     domain_str = task_info["domain_str"].replace("_", " ")
 
     # Print the task information
@@ -171,7 +182,7 @@ def run_task_simulation(
     assistant_functions += [function_to_json(exit_conversation)]
 
     # assign the instructions and tools to the assistant agent
-    assistant_agent.instructions = assistant_info["instructions"]
+    assistant_agent.instructions = apply_scaffold(assistant_info["instructions"], args.scaffold)
     assistant_agent.functions = assistant_functions
     assistant_agent.name = f"{domain_str} assistant"
     
@@ -224,7 +235,7 @@ def run_task_simulation(
         
     # the interaction history and the final database state
     return {
-        "prompt": assistant_info['instructions'],
+        "prompt": assistant_agent.instructions,
         "interaction": interaction_result.messages,
         "database": domain_system.data,
     }

@@ -16,11 +16,12 @@ import weakref
 from typing import Literal
 from swarm.gemini import gemini_chat_completion_openai_format
 from swarm.claude import claude_chat_completion_openai_format
-from swarm.constants import (OPENAI_MODELS, 
-                             GEMINI_MODELS, 
-                             CLAUDE_MODELS, 
+from swarm.constants import (OPENAI_MODELS,
+                             GEMINI_MODELS,
+                             CLAUDE_MODELS,
                              FIREWORKS_MODELS,
-                             OSS_MODELS, 
+                             OSS_MODELS,
+                             OPENROUTER_MODELS,
                              FUNCTION_CALLING_MODELS,
                              AVAILABLE_MODELS)
 from swarm.util import *
@@ -99,7 +100,11 @@ class OpenAIHandler:
         _handler_instances.add(weakref.ref(self))
         
         # Check model support with case-insensitive comparison
-        if model_name in OPENAI_MODELS:
+        # OpenRouter is checked first so that a short name that also exists in a
+        # native list (e.g. "gemini-2.5-pro") is routed through OpenRouter.
+        if model_name in OPENROUTER_MODELS:
+            self.backend = "openrouter"
+        elif model_name in OPENAI_MODELS:
             self.backend = "openai"
         elif model_name in GEMINI_MODELS:
             self.backend = "gemini"
@@ -120,6 +125,9 @@ class OpenAIHandler:
         elif self.backend == "fireworks":
             self.model_name_huggingface = FIREWORKS_MODELS[model_name]
             self._init_fireworks()
+        elif self.backend == "openrouter":
+            self.model_name_huggingface = OPENROUTER_MODELS[model_name]
+            self._init_openrouter()
         elif self.backend == "openai":
             self._init_openai()
         elif self.backend == "claude":
@@ -150,6 +158,12 @@ class OpenAIHandler:
             base_url="https://api.fireworks.ai/inference/v1",
             api_key=os.getenv("FIREWORKS_API_KEY")
         )
+
+    def _init_openrouter(self) -> None:
+        self.client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
+            api_key=os.getenv("OPENROUTER_API_KEY")
+        )
     
     def _init_claude(self) -> None:
         self.client = claude_chat_completion_openai_format
@@ -179,7 +193,11 @@ class OpenAIHandler:
         ]
         
         # Add the max model length
-        if "gemma" in self.model_name_huggingface.lower():
+        if "gemma-3" in self.model_name_huggingface.lower() or "gemma-4" in self.model_name_huggingface.lower():
+            # Gemma 3/4 support long context (128k); the old 4096 cap overflows
+            # SOPBench's ReAct prompts (system + full tool descriptions).
+            vllm_cmd.append("32000")
+        elif "gemma" in self.model_name_huggingface.lower():
             vllm_cmd.append("4096")
         elif "mistral" in self.model_name_huggingface.lower():
             vllm_cmd.append("8192")
@@ -188,7 +206,32 @@ class OpenAIHandler:
         else:
             vllm_cmd.append("32000")
 
-        # Check if LoRA is enabled  
+        # Enable native (OpenAI-style) function calling for models that support it.
+        # Qwen3.x uses vLLM's qwen3 tool-call parser. Only added for Qwen so it
+        # does not affect other models' ReAct launches.
+        if "qwen3" in self.model_name_huggingface.lower():
+            vllm_cmd.extend(["--enable-auto-tool-choice", "--tool-call-parser", "qwen3_xml"])
+            # Thinking runs route the think channel to reasoning_content so it
+            # never pollutes content / conversation history.
+            if os.getenv("QWEN35_THINKING") == "1":
+                vllm_cmd.extend(["--reasoning-parser", "qwen3"])
+        elif "gemma-4" in self.model_name_huggingface.lower():
+            vllm_cmd.extend(["--enable-auto-tool-choice", "--tool-call-parser", "gemma4"])
+            # Optional thinking mode (Google docs: reasoning significantly
+            # enhances Gemma 4 function-calling accuracy). The reasoning parser
+            # routes the thought channel to reasoning_content, keeping
+            # content/tool_calls clean.
+            if os.getenv("GEMMA4_THINKING") == "1":
+                vllm_cmd.extend(["--reasoning-parser", "gemma4"])
+        elif "gemma-3" in self.model_name_huggingface.lower():
+            # Gemma 3's native chat template has no tools support; use vLLM's
+            # official pythonic tool template + pythonic parser for FC.
+            vllm_cmd.extend([
+                "--enable-auto-tool-choice", "--tool-call-parser", "pythonic",
+                "--chat-template", os.path.join(os.path.dirname(os.path.abspath(__file__)), "templates", "tool_chat_template_gemma3_pythonic.jinja"),
+            ])
+
+        # Check if LoRA is enabled
         if self.lora_path:
             vllm_cmd.extend([
                 "--enable-lora",
@@ -207,7 +250,7 @@ class OpenAIHandler:
         # Wait for the server to start
         self._wait_for_server()
 
-    def _wait_for_server(self, max_retries: int = 15, retry_delay: int = 30) -> None:
+    def _wait_for_server(self, max_retries: int = 40, retry_delay: int = 30) -> None:
         """Wait for VLLM server to start."""
         stop_event = threading.Event()
 
@@ -222,13 +265,27 @@ class OpenAIHandler:
         # Wait for server
         for retry in range(max_retries):
             try:
-                response = requests.get(f"http://localhost:{self.VLLM_PORT}/v1/models")
+                # timeout guards against polling a port that accepts TCP but
+                # never speaks HTTP (e.g. another vLLM's internal ZMQ socket) —
+                # without it the very first get() can hang forever.
+                response = requests.get(f"http://localhost:{self.VLLM_PORT}/v1/models", timeout=10)
                 if response.status_code == 200:
+                    # Guard against random-port collisions: verify this server
+                    # actually serves OUR model. A colliding server responds 200
+                    # but 404s every completion request (writes empty results).
+                    served = [m.get("id") for m in response.json().get("data", [])]
+                    if str(self.model_name_huggingface) not in served:
+                        stop_event.set()
+                        raise RuntimeError(
+                            f"Port collision on {self.VLLM_PORT}: server there serves "
+                            f"{served}, not {self.model_name_huggingface}. Aborting job "
+                            f"(pool retry will pick a fresh port).")
                     print("Server is ready!")
                     stop_event.set()
                     return
-            except requests.exceptions.ConnectionError:
-                print(f"Server is not ready yet. Trying {retry+1} times...")
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+                kind = "timed out" if isinstance(e, requests.exceptions.Timeout) else "not ready"
+                print(f"Server probe {kind} on port {self.VLLM_PORT}. Trying {retry+1} times...")
                 time.sleep(retry_delay)
 
         raise ConnectionError(f"Server not ready after {max_retries} retries.")
@@ -498,7 +555,7 @@ class OpenAIHandler:
         """        
         # format the messages into the correct format for all chat completion API
         norm_messages = copy.deepcopy(test_entry["messages"])
-        if self.backend in ["openai", "vllm", "fireworks", "gemini"]:
+        if self.backend in ["openai", "vllm", "fireworks", "gemini", "openrouter"]:
             for idx, message in enumerate(norm_messages):
                 norm_messages[idx] = self.format_message(message)
         
@@ -513,13 +570,34 @@ class OpenAIHandler:
             "logprobs": test_entry.get("logprobs", False),
             "stop": test_entry.get("stop", None)
         }
+        # Gemma-4 thinking mode: template default is non-thinking; opt in per run.
+        if (self.backend == "vllm" and os.getenv("GEMMA4_THINKING") == "1"
+                and "gemma-4" in str(self.model_name_huggingface).lower()):
+            chat_completion_params["extra_body"] = {
+                "chat_template_kwargs": {"enable_thinking": True}
+            }
+        # Qwen3.5 thinking control: 4B/9B templates default to thinking ON,
+        # which with small max_tokens truncates mid-thought before any tool
+        # call (official vLLM recipe serves Qwen3.5 with enable_thinking=false).
+        # QWEN35_THINKING takes precedence over QWEN35_NOTHINK.
+        if self.backend == "vllm" and "qwen3" in str(self.model_name_huggingface).lower():
+            if os.getenv("QWEN35_THINKING") == "1":
+                chat_completion_params["extra_body"] = {
+                    "chat_template_kwargs": {"enable_thinking": True}
+                }
+            elif os.getenv("QWEN35_NOTHINK") == "1":
+                chat_completion_params["extra_body"] = {
+                    "chat_template_kwargs": {"enable_thinking": False}
+                }
                 
         ######################################################################
         # TOOL CALLING: Different ways to call tools and take actions
         ######################################################################
         tools = test_entry.get("tools", None)
         if not tools:
-            if self.backend in ["openai", "vllm", "fireworks"]:
+            if self.backend in ["openai", "vllm", "fireworks", "openrouter"]:
+                if self.backend == "openrouter":
+                    chat_completion_params.pop("logprobs", None)
                 completion = self.client.chat.completions.create(**chat_completion_params)
             elif self.backend in ["gemini", "claude"]:
                 completion = self.client(**chat_completion_params)
@@ -536,6 +614,13 @@ class OpenAIHandler:
             assert self.model_name in FUNCTION_CALLING_MODELS[self.backend], f"Model {self.model_name} is not supported for tool calling."
             chat_completion_params["tools"] = tools
             if self.backend in ["openai", "vllm"]:
+                if self.backend == "vllm":
+                    # vLLM's OpenAI server does not accept the "strict" tool field
+                    norm_tools = copy.deepcopy(tools)
+                    for tool in norm_tools:
+                        if "strict" in tool["function"]:
+                            del tool["function"]["strict"]
+                    chat_completion_params["tools"] = norm_tools
                 if not any(_ in self.model_name_huggingface for _ in ["o1", "o3", "o4"]):
                     chat_completion_params["parallel_tool_calls"] = test_entry.get("parallel_tool_calls", False)
                 if self.model_name_huggingface in ["gpt-5", "gpt-5-mini", "gpt-5-nano"]:
@@ -546,13 +631,17 @@ class OpenAIHandler:
                     del chat_completion_params["top_p"]
                     chat_completion_params["max_completion_tokens"] = max_completion_tokens
                 completion = self.client.chat.completions.create(**chat_completion_params)
-            elif self.backend in ["fireworks"]:
-                # Does not support "strict" field in tool description
+            elif self.backend in ["fireworks", "openrouter"]:
+                # These OpenAI-compatible gateways do not support the "strict" field
                 norm_tools = copy.deepcopy(tools)
                 for tool in norm_tools:
                     if "strict" in tool["function"]:
                         del tool["function"]["strict"]
                 chat_completion_params["tools"] = norm_tools
+                if self.backend == "openrouter":
+                    # Gemini via OpenRouter does not accept logprobs; keep max_tokens
+                    # (incl. reasoning) consistent with the native chat backends.
+                    chat_completion_params.pop("logprobs", None)
                 completion = self.client.chat.completions.create(**chat_completion_params)
             elif self.backend in ["gemini", "claude"]:
                 completion = self.client(**chat_completion_params)
@@ -563,8 +652,8 @@ class OpenAIHandler:
         
         # Prompt-based tool calling (react or act-only), 
         # Need input formatter and output parser, and change into FC format    
-        elif tool_call_mode in ["react", "act-only", "react-v"]:            
-            if self.backend in ["openai", "vllm", "fireworks"]:
+        elif tool_call_mode in ["react", "act-only", "react-v"]:
+            if self.backend in ["openai", "vllm", "fireworks", "openrouter"]:
                 chat_completion_func = self.client.chat.completions.create
             elif self.backend in ["gemini", "claude"]:
                 chat_completion_func = self.client
