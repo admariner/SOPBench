@@ -1,0 +1,727 @@
+[
+  {
+    "function": {
+      "name": "login_user",
+      "description": "Logs in the user to authenticate the user to access their account. Returns true or false for login success or failure.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          },
+          "password": {
+            "type": "string",
+            "description": "the password to their account"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "password"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "logout_user",
+      "description": "Logs out the user if the user was previously logged in. Returns true always because of successful logout.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "show_available_book",
+      "description": "Retrieves a list of books available for borrowing. Returns a list of books available for borrowing.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "borrow_book",
+      "description": "Allows a user to borrow a book and sets its return date. Returns true or false for successful book borrowing.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          },
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "book_title"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "return_book",
+      "description": "Allows a user to return a borrowed book and updates their late count if the book is overdue. Returns true or false for successful book return.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          },
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "book_title"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "check_return_date",
+      "description": "Retrieves the return date for the user's specified borrowed book. Returns the return date for the user's specified borrowed book.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          },
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "book_title"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "get_account_balance",
+      "description": "Retrieves the current balance of the user's account. Returns the float account balance or None if retrieval conditions are not met.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "credit_balance",
+      "description": "Adds a specified amount to the user's account balance. Returns true or false for successful addition of funds to the user's account balance.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          },
+          "amount": {
+            "type": "number",
+            "description": "the amount of money specified by the function description."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "amount"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "pay_late_fee",
+      "description": "Deducts the total late fee from the user's account balance. Returns true or false for successful deduction of late fees from the user's account balance.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "update_membership",
+      "description": "Updates the user's restricted access status and deducts the monthly fee from their balance. Returns the new expiration date of the restricted access or None if the update condition is not met.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "add_book",
+      "description": "Adds a new book to the library database. Returns true or false for successful addition of a new book to the library database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          },
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          },
+          "count": {
+            "type": "number",
+            "description": "the number of copies of a book to add or remove from the library's database."
+          },
+          "restricted": {
+            "type": "boolean",
+            "description": "a boolean indicating whether a book is restricted."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "book_title",
+          "count",
+          "restricted"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "remove_book",
+      "description": "Removes a book from the library database. Returns true or false for successful removal of a book from the library database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          },
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "book_title"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "show_available_rooms",
+      "description": "Retrieves a dictionary of rooms with their available slots to reserve. Returns a dictionary of a dictionary of rooms with their available slots to reserve.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "reserve_room",
+      "description": "Reserves the specified room for the user on the specified date for a list of specified slots. Returns true or false for successful room reservation.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          },
+          "room_id": {
+            "type": "string",
+            "description": "a string representing the id of a library room to reserve"
+          },
+          "resv_date": {
+            "type": "string",
+            "description": "a string representing the date when the user want to reserve a room."
+          },
+          "slots": {
+            "type": "array",
+            "description": "a list of time slots that the user want to reserve a certain room on a specified day.",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "room_id",
+          "resv_date",
+          "slots"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_username_exist",
+      "description": "Checks if a specific username exists in the Library database. Returns true if the inputted username of the account does exist in the database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_convert_book_title_to_id",
+      "description": "Converts a book title to the corresponding book id. Returns a string representing the book id.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "book_title"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_book_exist",
+      "description": "Checks if a book title exists in the library database. Returns true or false based on the existence of the book title in the library database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "book_title"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_book_available",
+      "description": "Checks if a book is available for borrowing. Returns true or false based on the availability of a book for borrowing.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "book_title"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_user_borrowed",
+      "description": "Retrieves a list of user's borrowed books. Returns a list of user's borrowed books' ids.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_user_num_borrowed",
+      "description": "Retrieves the number of books the user has borrowed. Returns an integer of the number of books the user has borrowed.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_calculate_late_fee",
+      "description": "Calculates the user's late fee based on their number of late returns. Returns a float of the late fee the user has to pay.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_membership_fee",
+      "description": "Retrieves the restricted access monthly fee from the database. Returns a floar representing the restricted access monthly fee.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_is_restricted",
+      "description": "Checks if a book is marked as restricted. Returns true or false based on whether a book is marked as restricted.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "book_title": {
+            "type": "string",
+            "description": "the title of the book to be borrowed, returned, or managed."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "book_title"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_membership_status",
+      "description": "Retrieves the restricted access status of a user. Returns a string representing the expiration date of the user's restricted access status or none if the user don't have a restricted access.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_is_admin",
+      "description": "Checks if a user has admin privileges. Returns true or false based on whether the user has admin privileges.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_num_reserved_slots",
+      "description": "Counts the number of the user's reserved slots based on their current reservation. Returns an integer of the number of reserved slots in the user's current reservation",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "a string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_room_exist",
+      "description": "Checks if a specified room id exists in the database. Returns true or false based on the existence of the specified room id in the database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "room_id": {
+            "type": "string",
+            "description": "a string representing the id of a library room to reserve"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "room_id"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_date_available_for_the_room",
+      "description": "Checks if the specified date is available for the room. Returns true or false based on the availability of the specified date for the specified room.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "room_id": {
+            "type": "string",
+            "description": "a string representing the id of a library room to reserve"
+          },
+          "resv_date": {
+            "type": "string",
+            "description": "a string representing the date when the user want to reserve a room."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "room_id",
+          "resv_date"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_all_slots_available_for_the_room_on_the_date",
+      "description": "Checks if the provided slots are alll available for the specified room on the specified date. Returns true or false based on the availability of time slots for the specified room on the specified date.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "room_id": {
+            "type": "string",
+            "description": "a string representing the id of a library room to reserve"
+          },
+          "resv_date": {
+            "type": "string",
+            "description": "a string representing the date when the user want to reserve a room."
+          },
+          "slots": {
+            "type": "array",
+            "description": "a list of time slots that the user want to reserve a certain room on a specified day.",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "room_id",
+          "resv_date",
+          "slots"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_convert_human_date_to_iso",
+      "description": "Converts a verbalized date string to an ISO 8601 formatted date string ('YYYY-MM-DD'). Returns an ISO 8601 formatted date string ('YYYY-MM-DD').",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date_string": {
+            "type": "string",
+            "description": "the date in a human-readable string format,where the month is an English word (e.g., 'January'), the day is a number followed by a proper suffix (e.g., '1st', '2nd', '4th'), and the year is a four-digit number (e.g., '2024'). Example: 'January 25th, 2024'."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "date_string"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_convert_iso_to_human_date",
+      "description": "Converts an ISO 8601 formatted date string ('YYYY-MM-DD') to a verbalized date string. Returns a verbalized date string.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "iso_date": {
+            "type": "string",
+            "description": "an ISO date string ('YYYY-MM-DD')."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "iso_date"
+        ]
+      }
+    },
+    "type": "function"
+  }
+]

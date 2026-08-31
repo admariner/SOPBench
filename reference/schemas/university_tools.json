@@ -1,0 +1,412 @@
+[
+  {
+    "function": {
+      "name": "login_user",
+      "strict": false,
+      "description": "Authenticates student using university credentials Returns true or false for login success or failure.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          },
+          "password": {
+            "type": "string",
+            "description": "The student's secret authentication credential"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "password"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "logout_user",
+      "strict": true,
+      "description": "Terminates student session Returns true always because logout is successful.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "enroll_course",
+      "strict": true,
+      "description": "Enrolls student in specified course after checking prerequisites and availability Returns true or false based on successful course enrollment.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          },
+          "course_code": {
+            "type": "string",
+            "description": "Alphanumeric code identifying a course (e.g. 'CS101')"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "course_code"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "drop_course",
+      "strict": true,
+      "description": "Withdraws student from enrolled course before deadline Returns true or false based on successful course removal.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          },
+          "course_code": {
+            "type": "string",
+            "description": "Alphanumeric code identifying a course (e.g. 'CS101')"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "course_code"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "request_graduation",
+      "strict": true,
+      "description": "Initiates graduation application process Returns true or false based on successful graduation.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "apply_financial_aid",
+      "strict": true,
+      "description": "Submits financial assistance application Returns true or false based on application submission status.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "change_major",
+      "strict": true,
+      "description": "Updates student's declared academic program Returns true or false based on successful major update.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          },
+          "new_major": {
+            "type": "string",
+            "description": "Name of the academic major program to switch to"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "new_major"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "declare_minor",
+      "strict": true,
+      "description": "Adds secondary academic specialization Returns true or false based on successful minor declaration.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          },
+          "minor": {
+            "type": "string",
+            "description": "Name of the academic minor program to declare"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "minor"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_username_exists",
+      "strict": false,
+      "description": "Verifies student record existence This is an internal action, only accessible by the assistant. Returns true or false based on student record existence. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_course_exists",
+      "strict": false,
+      "description": "Validates course availability This is an internal action, only accessible by the assistant. Returns true or false based on course availability. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "description": "Alphanumeric code identifying a course (e.g. 'CS101')"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "course_code"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_student_info",
+      "strict": false,
+      "description": "Accesses student records This is an internal action, only accessible by the assistant. Returns student profile including academic and contact details. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the student's unique identifier in the system"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_course_info",
+      "strict": false,
+      "description": "Fetches course details This is an internal action, only accessible by the assistant. Returns course metadata including schedule and credits. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "description": "Alphanumeric code identifying a course (e.g. 'CS101')"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "course_code"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_academic_calendar",
+      "strict": false,
+      "description": "Retrieves academic timeline This is an internal action, only accessible by the assistant. Returns academic calendar details. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_major_info",
+      "strict": false,
+      "description": "Retrieves program requirements This is an internal action, only accessible by the assistant. Returns requirements and structure of academic programs. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "major": {
+            "type": "string",
+            "description": "Name of an academic major program offered by the university"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "major"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_minor_info",
+      "strict": false,
+      "description": "Retrieves minor requirements and structure This is an internal action, only accessible by the assistant. Returns minor requirements including courses and GPA rules. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "minor": {
+            "type": "string",
+            "description": "Name of the academic minor program to declare"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "minor"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_minor_exists",
+      "strict": false,
+      "description": "Validates minor program availability This is an internal action, only accessible by the assistant. Returns true or false based on minor program availability. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "minor": {
+            "type": "string",
+            "description": "Name of the academic minor program to declare"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "minor"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_major_exists",
+      "strict": false,
+      "description": "Verifies academic program existence This is an internal action, only accessible by the assistant. Returns true or false based on major program existence. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "major": {
+            "type": "string",
+            "description": "Name of an academic major program offered by the university"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "major"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_interaction_time",
+      "strict": true,
+      "description": "Gets current system timestamp This is an internal action, only accessible by the assistant. Returns current system timestamp. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_number_of_students_for_major",
+      "strict": false,
+      "description": "Gets the amount of students for a specific major This is an internal action, only accessible by the assistant. Returns the number of students for a specific major. This is an internal action, only accessible by the assistant.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "major": {
+            "type": "string",
+            "description": "Name of an academic major program offered by the university"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "major"
+        ]
+      }
+    },
+    "type": "function"
+  }
+]

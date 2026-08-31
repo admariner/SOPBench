@@ -1,0 +1,686 @@
+[
+  {
+    "function": {
+      "name": "show_available_rooms",
+      "description": "Displays available rooms across all room types. Returns the dictionary of all room types and their availability.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "show_room_change_options",
+      "description": "Lists valid reasons a guest can request a room change. Returns a list of valid reasons guests may provide to request a room change.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "book_room",
+      "description": "Books a room for the guest given the room type, date range, and payment details. Returns true or false for whether the booking and room assignment was successful.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          },
+          "room_type": {
+            "type": "string",
+            "description": "A string representing the category of room the guest wishes to book or switch to."
+          },
+          "check_in_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check in."
+          },
+          "check_out_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check out."
+          },
+          "amount": {
+            "type": "number",
+            "description": "A float representing the amount of money provided by the user for a given transaction."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name",
+          "room_type",
+          "check_in_date",
+          "check_out_date",
+          "amount"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "find_booking_info",
+      "description": "Finds the booking information for the guest with the specified date range. Returns a dictionary of booking details for the guest if a matching reservation is found.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          },
+          "check_in_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check in."
+          },
+          "check_out_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check out."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name",
+          "check_in_date",
+          "check_out_date"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "cancel_reservation",
+      "description": "Cancels a confirmed reservation for the guest for the specified date range. Returns true or false for whether the reservation was successfully canceled.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          },
+          "check_in_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check in."
+          },
+          "check_out_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check out."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name",
+          "check_in_date",
+          "check_out_date"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "modify_reservation",
+      "description": "Modifies the guest's existing reservation to new dates and room type. Returns true or false for whether the reservation was successfully modified.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          },
+          "old_check_in_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the original check-in date before modification."
+          },
+          "old_check_out_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the original check-out date before modification."
+          },
+          "check_in_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check in."
+          },
+          "check_out_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check out."
+          },
+          "room_type": {
+            "type": "string",
+            "description": "A string representing the category of room the guest wishes to book or switch to."
+          },
+          "amount": {
+            "type": "number",
+            "description": "A float representing the amount of money provided by the user for a given transaction."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name",
+          "old_check_in_date",
+          "old_check_out_date",
+          "check_in_date",
+          "check_out_date",
+          "room_type",
+          "amount"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "process_guest_checkin",
+      "description": "Processes the check-in of a guest on the day of arrival. Returns the assigneed room id upon successful check-in.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          },
+          "check_in_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check in."
+          },
+          "check_out_date": {
+            "type": "string",
+            "description": "A string of the format \"YYYY-MM-DD\" representing the date when the guest expects to check out."
+          },
+          "identification": {
+            "type": "object",
+            "description": "A dictionary of the guest's identification document, including the type of the document and the guest's birthday.",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "A string representing the type of the identification document (e.g., passport, driver_license)."
+              },
+              "birthday": {
+                "type": "string",
+                "description": "A string representing the guest's date of birth in YYYY-MM-DD format."
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "type",
+              "birthday"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name",
+          "check_in_date",
+          "check_out_date",
+          "identification"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "process_guest_checkout",
+      "description": "Processes the checkout of a guest and applies loyalty rewards if eligible. Returns true or false for whether the checkout was successful.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          },
+          "key_returned": {
+            "type": "boolean",
+            "description": "A boolean value indicating whether the guest has returned their room key upon checkout."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name",
+          "key_returned"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "request_room_change",
+      "description": "Processes a room change request by the guest during their stay given a valid reason and payment. Returns true or false for whether the room change was successful.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          },
+          "amount": {
+            "type": "number",
+            "description": "A float representing the amount of money provided by the user for a given transaction."
+          },
+          "reason": {
+            "type": "string",
+            "description": "A string representing the reason for a room change request."
+          },
+          "room_type": {
+            "type": "string",
+            "description": "A string representing the category of room the guest wishes to book or switch to."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name",
+          "amount",
+          "reason",
+          "room_type"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "place_room_service_order",
+      "description": "Places a new room service order for the guest. Returns true or false for whether the room service order was placed successfully.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          },
+          "room_id": {
+            "type": "string",
+            "description": "A string representing the ID of a specific room."
+          },
+          "order_type": {
+            "type": "string",
+            "description": "A string representing a category of the room service provided by the hotel."
+          },
+          "order_items": {
+            "type": "array",
+            "description": "A list of objects representing each room service order entry, where each object contains a \"name\" field for the menu item and a \"quantity\" field for how many of that item to order.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the menu item."
+                },
+                "quantity": {
+                  "type": "integer",
+                  "description": "Quantity for the menu item."
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "quantity"
+              ]
+            }
+          },
+          "payment_method": {
+            "type": "string",
+            "description": "A string indicating how the guest will pay for the room service."
+          },
+          "amount": {
+            "type": "number",
+            "description": "A float representing the amount of money provided by the user for a given transaction."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name",
+          "room_id",
+          "order_type",
+          "order_items",
+          "payment_method"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "register_loyalty_member",
+      "description": "Registers the specified guest into the loyalty program with a generated unique ID and initial tier. Returns true or false for whether the registration to the loyalty program was successful.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_room_checkin_details",
+      "description": "Retrieves current room check-in records. Returns the dictionary of current room check-in records.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_booking_details",
+      "description": "Retrieves all current bookings in the hotel system. Returns the dictionary of all current guest bookings with full reservation data.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_loyalty_member_info",
+      "description": "Retrieves information of the specified loyalty members, including status and points. Returns the dictionary of the specified loyalty program member with their status and points.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_interaction_time",
+      "description": "Returns the timestamp of the current system interaction. Returns the current system timestamp indicating the time of interaction.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_room_service_order_details",
+      "description": "Retrieves the details of all room service orders. Returns a dictionary of all room service orders placed during guest stays.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_room_assignment",
+      "description": "Retrieves the mapping of booking IDs to their assigned room IDs. Returns a dictionary mapping booking IDs to room IDs.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_compute_room_service_order_fee",
+      "description": "Calculates the total cost of a room service order given item quantities and order type. Returns the total cost of the specified room service order.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "order_type": {
+            "type": "string",
+            "description": "A string representing a category of the room service provided by the hotel."
+          },
+          "order_items": {
+            "type": "array",
+            "description": "A list of objects representing each room service order entry, where each object contains a \"name\" field for the menu item and a \"quantity\" field for how many of that item to order.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the menu item."
+                },
+                "quantity": {
+                  "type": "integer",
+                  "description": "Quantity for the menu item."
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "quantity"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "order_type",
+          "order_items"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_valid_room_type",
+      "description": "Checks whether the specified room type exists in the hotel system. Returns true or false depending on whether the provided room type exists in the hotel database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "room_type": {
+            "type": "string",
+            "description": "A string representing the category of room the guest wishes to book or switch to."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "room_type"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_is_loyalty_member",
+      "description": "Checks if the guest is currently registered as a loyalty member. Returns true or false depending on whether the given user is enrolled in the loyalty program.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "guest_name": {
+            "type": "string",
+            "description": "A string representing the name of the guest."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "guest_name"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_valid_room_change_reason",
+      "description": "Checks whether the provided reason is valid for requesting a room change. Returns true or false depending on whether the reason is a valid room change reason.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "description": "A string representing the reason for a room change request."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "reason"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_valid_room_service_order_type",
+      "description": "Checks if the specified room service order type exists. Returns true or false depending on whether the room service order type is valid.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "order_type": {
+            "type": "string",
+            "description": "A string representing a category of the room service provided by the hotel."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "order_type"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_valid_room_service_item",
+      "description": "Checks if the room service items are available in the specified category. Returns true or false depending on whether the room service item exists in any category.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "order_type": {
+            "type": "string",
+            "description": "A string representing a category of the room service provided by the hotel."
+          },
+          "order_items": {
+            "type": "array",
+            "description": "A list of objects representing each room service order entry, where each object contains a \"name\" field for the menu item and a \"quantity\" field for how many of that item to order.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the menu item."
+                },
+                "quantity": {
+                  "type": "integer",
+                  "description": "Quantity for the menu item."
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "quantity"
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "order_type",
+          "order_items"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_valid_room_id",
+      "description": "Checks if the specified room id exists in the availability section of any room type. Returns true or false depending on whether the room id exists in the availability section of any room type.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "room_id": {
+            "type": "string",
+            "description": "A string representing the ID of a specific room."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "room_id"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_valid_room_service_payment_method",
+      "description": "Checks if the specified payment method is one of the accepted payment methods for room service. Returns true or false depending on whether the payment method is accetable for room service.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "payment_method": {
+            "type": "string",
+            "description": "A string indicating how the guest will pay for the room service."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "payment_method"
+        ]
+      }
+    },
+    "type": "function"
+  }
+]

@@ -1,0 +1,733 @@
+[
+  {
+    "function": {
+      "name": "login_user",
+      "description": "Logs in the user to authenticate the user to access their account. Returns true or false for login success or failure.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "identification": {
+            "type": "string",
+            "description": "The password to the user's account"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "identification"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "logout_user",
+      "description": "Logs out the user if the user was previously logged in. Returns true always because of successful logout.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "authenticate_admin_password",
+      "description": "Verifies that the entered admin password is correct for this account. Enables more functionality. Returns true or false for admin password verification.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "admin_password": {
+            "type": "string",
+            "description": "The admin password of the user's account to access additional functionalities in their account."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "admin_password"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "set_admin_password",
+      "description": "Sets the admin password for their account. Returns true or false for successful admin password reset.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "admin_password_new": {
+            "type": "string",
+            "description": "The new admin password of the user's account that the user set."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "admin_password_new"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "register_vehicle",
+      "description": "Registers the vehicle with the specfied plate number to the user. Returns true or false for successful vehicle registration.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          },
+          "model": {
+            "type": "string",
+            "description": "The model name of a vehicle."
+          },
+          "vin": {
+            "type": "string",
+            "description": "The Vehicle Identification Number of a vehicle."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "plate_num",
+          "model",
+          "vin"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "get_reg_status",
+      "description": "Gets the registration status of a specific vehicle. Returns the registration renewal date for the specified vehicle or None if retrieval conditions are not met.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "plate_num"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "change_vehicle_address",
+      "description": "Changes the address associated with the specified vehicle. Returns true or false for successful change of the address asspciated with the specified vehicle.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          },
+          "address_new": {
+            "type": "string",
+            "description": "The user's new address."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "plate_num",
+          "address_new"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "validate_vehicle_insurance",
+      "description": "Validates the user's specified vehicle's insurance status. Returns true or false for successful vehicle insurance validation.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "plate_num"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "renew_vehicle",
+      "description": "Renews the registration of the specified vehicle. Returns the vehicles's new renewal date or None if renewal conditions are not met.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "plate_num"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "get_dl_status",
+      "description": "Retrieves the status of the user's driver's license. Returns the expiration date of the user's driver's license or None if retrieval conditions are not met.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "update_dl_legal_name",
+      "description": "Updates the user's name on the driver's license. Returns true or false for successful update of the driver's license owner information.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "new_name": {
+            "type": "string",
+            "description": "The new name to display on the driver's license"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "new_name"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "change_dl_address",
+      "description": "Updates the address associated with the user's driver's license. Returns true or false for successful change of the address associated with the driver's license.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "address_new": {
+            "type": "string",
+            "description": "The user's new address."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "address_new"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "renew_dl",
+      "description": "Renews the user's driver's license. Returns the new expiration date of the driver's license or None if the renewal condtions are not met.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "show_available_test_slots",
+      "description": "Shows available test slots for the specified test_type. Returns the available test slots for the specified test_type.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "test_type": {
+            "type": "string",
+            "description": "The type of the test whose status the user wants to manage."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "test_type"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "schedule_test",
+      "description": "Schedules a knowledge or driving test for the user at the expected date and time. Returns true or false for successfully scheduling the specified test at the expected date and time.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "test_type": {
+            "type": "string",
+            "description": "The type of the test whose status the user wants to manage."
+          },
+          "schedule_time": {
+            "type": "string",
+            "description": "The user's expected scheduling time."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "test_type",
+          "schedule_time"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "cancel_test",
+      "description": "Cancels a knowledge or driving test for the user. Returns true or false for successfully canceling the specified test",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "test_type": {
+            "type": "string",
+            "description": "The type of the test whose status the user wants to manage."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "test_type"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "update_test_status",
+      "description": "Marks the status of a scheduled test as passed or not based on user's input.Issues a driver's license if the user passed the drive test Returns true or false for successfully updating the status of a scheduled test",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "test_type": {
+            "type": "string",
+            "description": "The type of the test whose status the user wants to manage."
+          },
+          "passed": {
+            "type": "boolean",
+            "description": "A boolean indicating whether the user have passed the test."
+          },
+          "legal_name": {
+            "type": "string",
+            "description": "The legal name displayed on the driver's license."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "test_type",
+          "passed"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "transfer_title",
+      "description": "Transfers a vehicle's title from one owner to another. Returns true or false for successful title transfer from the current owner to the new owner.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "target_owner": {
+            "type": "string",
+            "description": "The username of the target owner."
+          },
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "target_owner",
+          "plate_num"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_username_exist",
+      "description": "Checks if a specific username exists in the DMV database. Returns true or false based on the condition that the inputted username exists in the database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_user_birthday",
+      "description": "Retrieves the user's birthday. Returns the datatime object representing the user's birthday.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_has_vehicle",
+      "description": "Checks if a specific vehicle belongs to the user given a plate number. Returns true or false based on the user's ownership of the specified vehicle.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "plate_num"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_vehicle_registered",
+      "description": "Checks if a specified plate number has been registered by any user in the database. Returns true or false based on whether the specified plate number has been registered by any user in the database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "plate_num"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_vehicle_details",
+      "description": "Retrieves the details of the user's specified vehicle, including its model name, vin, registration date, registered address, and associated insurance status. Returns the dicitonary with the user's specified vehicle, including its model name, vin, registration date, registered address, and associated insurance status.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "plate_num": {
+            "type": "string",
+            "description": "An alphanumeric string to represent the plate number of a vehicle."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "plate_num"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_has_dl",
+      "description": "Checks if the user has a driver's license. Returns true or false based on the user's possession of the driver's license.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_dl_details",
+      "description": "Retrieves the details of the user's driver's license, including the dl number, legal name, expiration date, and address. Returns the dictionary with details of the user's driver's license, including the dl number, legal name, expiration date, and address.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_valid_test_type",
+      "description": "Checks if the input test type is valid. Returns true or false based on the validity of the input test type.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "test_type": {
+            "type": "string",
+            "description": "The type of the test whose status the user wants to manage."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "test_type"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_test_slot_available",
+      "description": "Checks if a specific test slot is available for the desired test type and time. Returns true or false based on the availability of the specified test at the expected date and time in the database.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "test_type": {
+            "type": "string",
+            "description": "The type of the test whose status the user wants to manage."
+          },
+          "schedule_time": {
+            "type": "string",
+            "description": "The user's expected scheduling time."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "test_type",
+          "schedule_time"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_test_details",
+      "description": "Retrieves the user's details of the specified test, including its status, scheduled time if any, and the number of attempts they made for the test. Returns a dictionary with the user's details of the specified test, including its status, scheduled time if any, and the number of attempts they made for the test.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string of letters, numbers, and symbols to represent their username"
+          },
+          "test_type": {
+            "type": "string",
+            "description": "The type of the test whose status the user wants to manage."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "test_type"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_interaction_time",
+      "description": "Retrieves the  current interaction timestamp recorded in the database. Returns the interaction timestamp.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  }
+]

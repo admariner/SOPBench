@@ -679,7 +679,6 @@ class Hotel_State_Tracker:
     def sufficient_amount_for_reservation_modification(self, guest_name:str, old_check_in_date:str, old_check_out_date:str, check_in_date:str, check_out_date:str, room_type:str, amount:float)->bool:
         bookings = self.domain_system.internal_get_booking_details()[1]
         rooms_info = self.domain_system.show_available_rooms()[1]
-        #TODO: remove breakpoints
         original_room_type = None
         for booking in bookings.values():
             if (booking["guest"] == guest_name and

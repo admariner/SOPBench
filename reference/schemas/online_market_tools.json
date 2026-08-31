@@ -1,0 +1,563 @@
+[
+  {
+    "function": {
+      "name": "login_user",
+      "description": "Logs in the user to authenticate them for accessing their online market account using a username and password. Returns true or false for successful or failed login based on provided credentials.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "password": {
+            "type": "string",
+            "description": "The password associated with the user's account."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "password"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "logout_user",
+      "description": "Logs out the user by clearing their session information. Returns true always because logout is successful.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "add_to_cart",
+      "description": "Adds a specified product to the user's cart with the desired quantity. Updates product stock accordingly. Returns true or false for successful addition of a product to the cart.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "product_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific product in the market."
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "The number of units of a product to add, remove, exchange, buy, etc."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "product_id",
+          "quantity"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "view_cart",
+      "description": "Displays the current contents of the user's cart, including product details and total cost. Returns a list containing the cart's contents.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "place_order",
+      "description": "Places an order for all items in the user's cart. Returns true for successful order placement or false for failure.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "view_order_history",
+      "description": "Retrieves the user's complete order history, including order details and statuses. Returns a list containing the user's order history.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "add_shipping_address",
+      "description": "Adds a new shipping address to the user's account. Returns true or false for successful addition of a new shipping address.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "address": {
+            "type": "string",
+            "description": "A full address to add to the user's shipping details."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "address"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "view_shipping_addresses",
+      "description": "Lists all shipping addresses associated with the user's account, indicating the default address. Returns a list containing all the user's shipping addresses.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "get_product_details",
+      "description": "Retrieves detailed information about a specific product, including price, stock, and reviews. Returns a dictionary containing product details.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific product in the market."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "product_id"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "add_review",
+      "description": "Submits a review for a specific product, including a rating and an optional comment. Updates the product's average rating. Returns true or false for successful addition of a product review.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "product_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific product in the market."
+          },
+          "rating": {
+            "type": "integer",
+            "description": "A numerical value representing the quality rating of a product (typically 1-5)."
+          },
+          "comment": {
+            "type": "string",
+            "description": "A brief text description provided by the user as part of a product review."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "product_id",
+          "rating",
+          "comment"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "cancel_order",
+      "description": "Cancels a specific order placed by the user, marking its status as canceled. Returns a true or false indicating whether the order cancellation was successful.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "order_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific order in the user's order history."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "order_id"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "return_order",
+      "description": "Processes a return for a delivered order. Returns a true or false indicating whether the return was successfully initiated.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "order_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific order in the user's order history."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "order_id"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "exchange_product",
+      "description": "Initiates a product exchange for an order, updating the order details accordingly. Returns a true or false indicating whether the product exchange was successfully initiated.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "order_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific order in the user's order history."
+          },
+          "old_product_id": {
+            "type": "string",
+            "description": "The unique identifier for the product the user wants to exchange."
+          },
+          "new_product_id": {
+            "type": "string",
+            "description": "The unique identifier for the product the user wants to exchange for."
+          },
+          "quantity": {
+            "type": "number",
+            "description": "The number of units of a product to add, remove, exchange, buy, etc."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "order_id",
+          "old_product_id",
+          "new_product_id",
+          "quantity"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "use_coupon",
+      "description": "Applies a valid coupon to the user's current cart, adjusting the total price. Returns a true or false indicating whether the coupon was successfully applied to the cart.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "order_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific order in the user's order history."
+          },
+          "coupon_code": {
+            "type": "string",
+            "description": "The unique identifier for a specific coupon in the market"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "order_id",
+          "coupon_code"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "get_order_details",
+      "description": "Fetches detailed information about a specific order, including the order items, status, cost, address, placed date, and number of exchanges. Returns a dictionary containing detailed information about the order, including the order items, status, cost, address, placed date, coupons used, and number of exchanges. The order status can include 'Processing', 'Shipped', 'Delivered', 'Refunding', 'Refunded', or 'Canceled'.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "order_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific order in the user's order history."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "order_id"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "get_coupons_used",
+      "description": "Retrieves all used coupons by a user. Returns a list of all coupons used.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_username_exist",
+      "description": "Checks if a specific username exists in the accounts database. This is an internal action, only accessible by the assistant. Returns true or false based on whether the username exists in the accounts database.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_product_exist",
+      "description": "Checks if a specific product exists in the products database. This is an internal action, only accessible by the assistant. Returns true or false based on whether the product ID exists in the products database.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific product in the market."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "product_id"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_coupon_exist",
+      "description": "Checks if a specific coupon exists in the coupons database. This is an internal action, only accessible by the assistant. Returns true or false based on whether the coupon_code exists in the coupons database.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "coupon_code": {
+            "type": "string",
+            "description": "The unique identifier for a specific coupon in the market"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "coupon_code"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_user_credit_status",
+      "description": "Retrieves the user's credit status This is an internal action, only accessible by the assistant. Returns a string indicating the user's credit status, such as 'excellent', 'good', or 'restricted'.",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username"
+        ]
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_interaction_time",
+      "description": "Retrieves the current interaction timestamp recorded in the database. This is an internal action, only accessible by the assistant. Returns the current interaction time as a string in ISO 8601 format.",
+      "strict": true,
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false,
+        "required": []
+      }
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_get_coupon_details",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "coupon_code": {
+            "type": "string",
+            "description": "The unique identifier for a specific coupon in the market"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "coupon_code"
+        ]
+      },
+      "description": "Fetches details of a specific coupon, such as product valibility and expiration date. This is an internal action, only accessible by the assistant. Returns a dictionary containing details about the specified coupon, such as expiration date, applicable products, and discount amount."
+    },
+    "type": "function"
+  },
+  {
+    "function": {
+      "name": "internal_check_order_exist",
+      "strict": false,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "A string representing the user's account name."
+          },
+          "order_id": {
+            "type": "string",
+            "description": "The unique identifier for a specific order in the user's order history."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "username",
+          "order_id"
+        ]
+      },
+      "description": "Checks if an order exists under a user. This is an internal action, only accessible by the assistant. Returns true or false based on whether an order exists under a user."
+    },
+    "type": "function"
+  }
+]

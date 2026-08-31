@@ -25,7 +25,7 @@ The following table shows model pass rates (%) across seven domains.
 | Claude-3-7-Sonnet (FC) | 65.67 | 70.10 | 70.97 | 56.98 | 66.67 | 27.27 | 23.59 | 52.29 |
 | GPT-4.1-mini (FC) | 57.46 | 76.29 | 66.13 | 56.40 | 35.71 | 18.18 | 7.18 | 44.70 |
 | GPT-4o-mini (FC) | 33.58 | 73.20 | 25.00 | 43.60 | 38.10 | 42.42 | 41.03 | 41.69 |
-| Claude-3-5-Sonnet (FC) | 71.90 | 50.43 | 39.23 | 43.32 | 52.27 | 33.33 | 15.82 | 41.35 |
+| Claude-3-5-Sonnet (FC) | 67.16 | 45.36 | 37.90 | 38.95 | 50.00 | 21.21 | 15.38 | 37.71 |
 | Gemini-2.0-Flash (FC) | 52.99 | 51.55 | 21.77 | 38.37 | 30.95 | 19.70 | 7.18 | 30.60 |
 | **_Open-source Reasoning Models_** | | | | | | | | |
 | Qwen3.5-4B (FC, thinking) | 61.19 | 87.63 | 84.68 | 61.63 | 71.43 | 36.36 | 70.77 | 68.67 |
@@ -41,36 +41,8 @@ The following table shows model pass rates (%) across seven domains.
 | Llama3.1-8B-Instruct (ReAct) | 14.93 | 18.56 | 20.16 | 16.28 | 23.81 | 30.30 | 0.00 | 14.58 |
 | Qwen2.5-7B-Instruct (ReAct) | 5.22 | 20.62 | 16.94 | 9.30 | 0.00 | 15.15 | 0.51 | 9.04 |
 
-<sub>Overall is the pass rate over all 830 cases (task-weighted micro average), matching the camera-ready paper. **Newly evaluated (2026-07/08):** Gemini-2.5-Pro via OpenRouter (FC, `max_tokens=512`); and, served locally via vLLM on the same 7-domain protocol, Qwen3.5 (2B/4B) and Gemma-4 (E2B/E4B) in native function calling with thinking enabled (`--enable-auto-tool-choice --tool-call-parser qwen3_xml` / `gemma4`, `max_model_len=32000`). Earlier Qwen3.5 runs without properly enabled thinking were invalidated and replaced; see `docs/SMALL_MODELS.md` for the audit.</sub>
+<sub>Overall is the pass rate over all 830 cases (task-weighted micro average). Every cell is recomputed from the released trajectories in `output/` and can be reproduced with `run_evaluation.py`; the Claude-3-5-Sonnet row is consequently slightly lower than the corresponding row in the paper, which was measured on an earlier version of the test set. Proprietary models are served through their official APIs, except Gemini-2.5-Pro, which is served through OpenRouter (`max_tokens=512`). Qwen3.5 (2B/4B) and Gemma-4 (E2B/E4B) are served locally with vLLM in native function calling with thinking enabled (`--enable-auto-tool-choice --tool-call-parser qwen3_xml` / `gemma4`, `max_model_len=32000`).</sub>
 <sub>**†** Gemini-2.5-Pro was run at `max_tokens=512` (matching Gemini-2.5-Flash); at that budget ~38.7% of its assistant turns were truncated by the model's own reasoning tokens, so these scores likely **understate** its true capability.</sub>
-
-### Oracle vs. Full Tool Set
-
-The main table above reports pass rates under the **full** tool set (`--tool_list full`), where the agent must select the correct tools from every tool available in the domain. The table below compares, for the nine models that have complete 7-domain trajectories under **both** settings, the **oracle** tool set (`--tool_list oracle`; only the tools the oracle solution uses for each case) against the **full** tool set. Both rows are scored with the identical `run_evaluation.py` pipeline (`--default_constraint_option full --constraint_descr_format structured`).
-
-| **Model** | **Tools** | **Bank** | **DMV** | **Healthcare** | **Market** | **University** | **Library** | **Hotel** |
-|:---------:|:--------:|:--------:|:-------:|:--------------:|:----------:|:--------------:|:-----------:|:---------:|
-| GPT-4o (FC) | oracle | 76.87 | 84.54 | 75.81 | 79.07 | 73.81 | 60.61 | 67.18 |
-| | full | 58.96 | 80.41 | 73.39 | 61.63 | 66.67 | 60.61 | 39.49 |
-| GPT-4o-mini (FC) | oracle | 47.01 | 82.47 | 77.42 | 66.28 | 73.81 | 69.70 | 55.90 |
-| | full | 33.58 | 73.20 | 25.00 | 43.60 | 38.10 | 42.42 | 41.03 |
-| Claude-3-5-Sonnet (FC) ‡ | oracle | 75.37 | 79.38 | 80.65 | 63.37 | 73.81 | 51.52 | 46.15 |
-| | full | 67.16 | 45.36 | 37.90 | 38.95 | 50.00 | 21.21 | 15.38 |
-| Gemini-2.0-Flash (FC) | oracle | 71.64 | 74.23 | 61.29 | 63.37 | 69.05 | 63.64 | 21.03 |
-| | full | 52.99 | 51.55 | 21.77 | 38.37 | 30.95 | 19.70 | 7.18 |
-| Gemini-1.5-Pro (FC) | oracle | 69.40 | 76.29 | 62.90 | 59.30 | 69.05 | 48.48 | 35.90 |
-| | full | 48.51 | 56.70 | 16.13 | 30.23 | 61.90 | 16.67 | 11.92 |
-| Qwen2.5-32B-Instruct (ReAct) | oracle | 76.87 | 80.41 | 77.42 | 54.07 | 66.67 | 60.61 | 55.38 |
-| | full | 40.30 | 52.58 | 41.13 | 44.19 | 54.76 | 27.27 | 18.46 |
-| Qwen2.5-14B-Instruct (ReAct) | oracle | 64.93 | 72.16 | 61.29 | 61.63 | 47.62 | 62.12 | 36.92 |
-| | full | 35.07 | 57.73 | 29.03 | 35.47 | 23.81 | 25.76 | 14.87 |
-| Qwen2.5-7B-Instruct (ReAct) | oracle | 58.21 | 61.86 | 33.06 | 41.86 | 28.57 | 50.00 | 10.26 |
-| | full | 5.22 | 20.62 | 16.94 | 9.30 | 0.00 | 15.15 | 0.51 |
-| Llama3.1-8B-Instruct (ReAct) | oracle | 41.04 | 59.79 | 43.55 | 22.09 | 42.86 | 50.00 | 3.08 |
-| | full | 14.93 | 18.56 | 20.16 | 16.28 | 23.81 | 30.30 | 0.00 |
-
-<sub>Oracle pass rates are ≥ full in nearly every cell, and the gap widens for smaller models (e.g. Qwen2.5-7B rises from single digits to 30–60), reflecting that restricting the agent to the oracle-used tools removes the tool-selection burden present in the full setting.</sub>
-<sub>**‡** The Claude-3-5-Sonnet full-tool row here is recomputed from the current trajectory files and differs slightly from the main-table row above (recorded from an earlier generation); the other eight models match the main table cell-for-cell.</sub>
 
 ## Getting Started
 
@@ -96,8 +68,12 @@ Create a `.env` file in the root directory with your API keys:
 OPENAI_API_KEY=your_openai_api_key
 ANTHROPIC_API_KEY=your_anthropic_api_key
 GEMINI_API_KEY=your_gemini_api_key
+OPENROUTER_API_KEY=your_openrouter_api_key
 FIREWORKS_API_KEY=your_fireworks_api_key
 ```
+
+Only the keys for the backends you actually call are needed. Models served
+locally through vLLM require no key.
 
 #### Supported Language Models
 
@@ -142,6 +118,17 @@ The following command line arguments control the simulation and evaluation:
 | `--env_mode` | Environment mode | "prompt" (without code constraint checking), "program" (with code constraint checking) |
 | `--tool_list` | Available tools | "full" (all tools), "oracle" (only the oracle-used tools for each case) |
 | `--tool_call_mode` | Tool call mode | "fc" (function calling), "react", "act-only" |
+
+The layered harness ablation reported in the paper is reproduced with three
+independent switches, each adding one kind of harness-supplied information on
+top of the oracle tool set:
+
+| Parameter | Description |
+|-----------|-------------|
+| `--constraint_hint` | Name the verification tool(s) that check each constraint |
+| `--constraint_verdict` | Append each data constraint's ground-truth satisfaction |
+| `--action_order` | Render the SOP's action graph as an explicit verification checklist |
+| `--scaffold pva` | Prepend a Plan-Verify-Act compliance procedure to the system prompt |
 
 #### Data Preparation
 
@@ -193,7 +180,10 @@ python run_checking.py \
   --tool_list [tool_list]
 ```
 
-Over 24,000 agent trajectories are provided in the `output/` directory for reference.
+More than 40,000 agent trajectories are provided in the `output/` directory, one
+file per (domain, model, setting). Each file holds the full message history,
+tool calls, and per-case evaluation outcome, so every number in the table above
+can be recomputed with `run_evaluation.py` without re-running any model.
 
 ## Project Structure
 
@@ -208,32 +198,36 @@ SOPBench/
 │   ├── gemini.py           # Gemini-specific utilities
 │   └── constants.py        # Project constants and configurations
 ├── env/                    # Environment for different domains
-│   ├── dependencies.py     # Core program code for constraint checking
+│   ├── task.py             # Task construction, SOP composition, constraint rendering
+│   ├── evaluator.py        # Outcome / step / trajectory oracle verifiers
+│   ├── dep_eval.py         # Constraint-composition evaluation
 │   ├── helpers.py          # Helper functions for environment
-│   ├── dep_eval.py         # Evaluation utilities
 │   ├── ablation.py         # Layered harness ablation switches (hints/verdicts/order)
 │   └── domains/            # Domain implementations (bank, dmv, healthcare, hotel, library, online_market, university)
-├── data/                   # Task data for simulation and evaluation
+├── data/                   # Task data for simulation and evaluation (830 cases)
+├── reference/              # Generated per-domain documentation (functions, constraints, prompts, tool schemas)
 ├── scripts/                # Shell scripts for simulation and evaluation
-├── analysis/               # SOP action-graph statistics and analysis utilities
-├── output/                 # All simulation and evaluation results
-│   ├── <domain>/           # Main results (paper main table): bank, dmv, healthcare, hotel, library, online_market, university
-│   ├── abl2_{oracle,hints,order,verdicts}/  # Layered harness ablation runs (paper Section 4.2)
-│   ├── abl_{hints,order,verdicts}/          # Earlier ablation runs (GPT-5-mini rows; retained for audit)
-│   ├── qwen_nothink/       # Qwen3.5 no-thinking runs (ablation no-thinking column)
-│   └── think_fc1024/       # Small-model thinking-FC runs (ablation thinking column)
-├── docs/                   # Experiment documentation and review records
-│   ├── ABLATION.md         # Layered harness ablation: design, runs, and findings
-│   ├── SMALL_MODELS.md     # Small-model FC/ReAct/thinking audit and rerun matrix
-│   └── ablation_prompt_examples/  # Verbatim prompt examples for each ablation setting
-├── latex/                  # Camera-ready paper source
-├── latex_submission/       # Submitted (pre-camera-ready) paper source, frozen
-├── archive/                # Deprecated data, superseded runs, and unadopted experiments (e.g. PVA)
+│   └── export_reference_docs.py  # Regenerates reference/ from env/domains/
+├── output/<domain>/        # Released agent trajectories and evaluation results
 ├── run_datagen.py          # Task generation script
 ├── run_simulation.py       # Simulation script
 ├── run_evaluation.py       # Evaluation script
-├── run_checking.py         # Validation script
-└── run_operation.py        # Operations script
+└── run_checking.py         # Trajectory inspection script
+```
+
+## Citation
+
+If you use SOPBench, please cite:
+
+```bibtex
+@inproceedings{li2026sopbench,
+  title     = {SOPBench: Evaluating Language Agents at Following Standard Operating Procedures and Constraints},
+  author    = {Li, Zekun and Huang, Shinda and Wang, Jiangtian and Zhang, Nathan and
+               Antoniades, Antonis and Hua, Wenyue and Zhu, Kaijie and Zeng, Sirui and
+               Wang, Chi and Wang, William Yang and Yan, Xifeng},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2026}
+}
 ```
 
 ## License

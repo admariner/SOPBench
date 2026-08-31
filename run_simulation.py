@@ -141,8 +141,6 @@ def run_task_simulation(
     assistant_agent: Agent = None,
     user_agent: Agent = None,
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], List[Any]]:
-    # TODO: implement the simulation    
-    
     """Initialize the task environment
     - domain_system: the domain system to use in this simulation
     - user_instructions: the user instructions  
