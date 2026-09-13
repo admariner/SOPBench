@@ -18,7 +18,7 @@ The following table shows model pass rates (%) across seven domains.
 | GPT-5 (FC) | 71.64 | 84.54 | 76.61 | 69.77 | 88.10 | 66.67 | 67.18 | 72.89 |
 | GPT-5-mini (FC) | 58.96 | 82.47 | 92.74 | 75.58 | 95.24 | 34.85 | 69.74 | 72.65 |
 | Gemini-2.5-Flash (FC) | 67.91 | 81.44 | 87.90 | 77.91 | 83.33 | 51.52 | 42.56 | 68.07 |
-| Gemini-2.5-Pro (FC) † | 69.40 | 76.29 | 79.84 | 56.98 | 90.48 | 51.52 | 52.31 | 64.82 |
+| Gemini-2.5-Pro (FC) | 69.40 | 76.29 | 79.84 | 56.98 | 90.48 | 51.52 | 52.31 | 64.82 |
 | **_Proprietary Non-reasoning Models_** | | | | | | | | |
 | GPT-4.1 (FC) | 69.40 | 79.38 | 79.03 | 80.81 | 50.00 | 57.58 | 42.56 | 66.14 |
 | GPT-4o (FC) | 58.96 | 80.41 | 73.39 | 61.63 | 66.67 | 60.61 | 39.49 | 60.12 |
@@ -40,9 +40,6 @@ The following table shows model pass rates (%) across seven domains.
 | Qwen2.5-14B-Instruct (ReAct) | 35.07 | 57.73 | 29.03 | 35.47 | 23.81 | 25.76 | 14.87 | 30.84 |
 | Llama3.1-8B-Instruct (ReAct) | 14.93 | 18.56 | 20.16 | 16.28 | 23.81 | 30.30 | 0.00 | 14.58 |
 | Qwen2.5-7B-Instruct (ReAct) | 5.22 | 20.62 | 16.94 | 9.30 | 0.00 | 15.15 | 0.51 | 9.04 |
-
-<sub>Overall is the pass rate over all 830 cases (task-weighted micro average). Every cell is recomputed from the released trajectories in `output/` and can be reproduced with `run_evaluation.py`; the Claude-3-5-Sonnet row is consequently slightly lower than the corresponding row in the paper, which was measured on an earlier version of the test set. Proprietary models are served through their official APIs, except Gemini-2.5-Pro, which is served through OpenRouter (`max_tokens=512`). Qwen3.5 (2B/4B) and Gemma-4 (E2B/E4B) are served locally with vLLM in native function calling with thinking enabled (`--enable-auto-tool-choice --tool-call-parser qwen3_xml` / `gemma4`, `max_model_len=32000`).</sub>
-<sub>**†** Gemini-2.5-Pro was run at `max_tokens=512` (matching Gemini-2.5-Flash); at that budget ~38.7% of its assistant turns were truncated by the model's own reasoning tokens, so these scores likely **understate** its true capability.</sub>
 
 ## Getting Started
 
